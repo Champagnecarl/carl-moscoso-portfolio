@@ -1,14 +1,1989 @@
-<!DOCTYPE html>
-  <html lang="en">
-  <head>
-  <meta charset="utf-8">
-  <title>Carl Moscoso — Interior Design Portfolio</title>
-<meta http-equiv="refresh" content="0; url=Carl-Moscoso-Rooms-Portfolio.html">
-<link rel="canonical" href="Carl-Moscoso-Rooms-Portfolio.html">
-  <script>location.replace("Carl-Moscoso-Rooms-Portfolio.html");</script>
-  </head>
-  <body>
-  <p>Redirecting to <a href="Carl-Moscoso-Rooms-Portfolio.html">the portfolio</a>&hellip;</p>
-  </body>
-  </html>
-  
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Rooms by Carl Moscoso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="app-css">
+:root{
+  --ground:#0B0F11;
+  --panel:#12181B;
+  --panel-2:#171F23;
+  --ink:#EDEEEC;
+  --ink-2:#93A1A7;
+  --ink-3:#5F6D74;
+  --line:#222C31;
+  --accent:#5AAFC8;
+  --accent-deep:#1F6E88;
+  --on-scene:#F6F6F4;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{background:var(--ground);color:var(--ink);font-family:var(--f-body);overflow:hidden;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:1.5px solid var(--accent);outline-offset:3px}
+
+#app{position:fixed;inset:0;overflow:hidden;background:var(--ground);
+  font-size:clamp(11px,0.48vw + min(0.82vh,7px),18px);
+  --gut:clamp(1em,2.4vw,2.4em);      /* screen edge to the view arrow */
+  --capleft:calc(var(--gut) + 3.6em); /* screen edge to the copy, clearing the arrow */}
+
+/* ---------- empty stage ---------- */
+#stage{
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.019) 0 2px,transparent 2px 11px),
+    radial-gradient(120% 90% at 50% 40%,#141B1F 0%,#0B0F11 72%);
+}
+#stage::after{content:"";position:absolute;inset:clamp(1em,2.4vw,2.1em) clamp(1em,2.4vw,2.1em) 5.3em;border:1px dashed rgba(147,161,167,.22);pointer-events:none}
+#stage.has-img{background-size:cover;background-position:center;background-repeat:no-repeat;animation:kb 40s ease-in-out infinite alternate}
+#stage.has-img::after{display:none}
+@keyframes kb{from{transform:scale(1.015)}to{transform:scale(1.075)}}
+#scrim{position:absolute;inset:0;z-index:2;pointer-events:none;display:none;
+  background:linear-gradient(to bottom,rgba(6,9,10,.74) 0%,rgba(6,9,10,.22) 15%,rgba(6,9,10,.06) 42%,rgba(6,9,10,.62) 82%,rgba(6,9,10,.93) 100%)}
+#app.img-on #scrim{display:block}
+#vignette{position:absolute;inset:0;z-index:3;pointer-events:none;display:none}
+#app.img-on #vignette{display:block}
+#app.img-on #slotcard{display:none}
+#app.img-on #caption h1{color:var(--on-scene);text-shadow:0 2px 30px rgba(0,0,0,.55)}
+#app.img-on #caption p.body{color:#DCE3E4;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+#app.img-on .meta{color:#C2CDD0}
+#app.img-on .meta span+span::before{color:rgba(194,205,208,.55)}
+#app.img-on .eyebrow{text-shadow:0 1px 12px rgba(0,0,0,.7)}
+#app.img-on .thumb{border-color:rgba(246,246,244,.26)}
+
+/* contained framing: image sits inside the chrome, its own ground fills the rest */
+#stage.fit-contain{
+  background-size:contain;background-position:center 40%;background-repeat:no-repeat;
+  padding:5em clamp(1.4em,5vw,6.4em) 9.3em;background-origin:content-box;background-clip:border-box;
+  animation:none;
+}
+
+/* light-ground scenes flip the chrome to dark ink */
+#app.tone-light #scrim{background:linear-gradient(to bottom,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 16%,rgba(255,255,255,0) 62%,rgba(255,255,255,.5) 88%,rgba(255,255,255,.72) 100%)}
+#app.tone-light .brand b,#app.tone-light .tlink{color:#141B1E}
+#app.tone-light .brand span{color:#3A4850}
+#app.tone-light .tlink:hover,#app.tone-light .tlink[aria-expanded="true"]{background:rgba(20,27,30,.09)}
+#app.tone-light .tcount{color:#3A4850;border-color:rgba(20,27,30,.28)}
+#app.tone-light.img-on #caption h1{color:#101719;text-shadow:0 1px 22px rgba(255,255,255,.75)}
+#app.tone-light.img-on #caption p.body{color:#314046;text-shadow:0 1px 10px rgba(255,255,255,.8)}
+#app.tone-light .eyebrow{color:var(--accent-deep);text-shadow:0 1px 10px rgba(255,255,255,.8)}
+#app.tone-light.img-on .meta{color:#4E5C63}
+#app.tone-light.img-on .meta span+span::before{color:rgba(78,92,99,.55)}
+#app.tone-light #rail{background:linear-gradient(transparent,color-mix(in srgb,var(--tone-bg,#DEE6F7) 92%,transparent) 55%);border-top-color:rgba(20,27,30,.16)}
+#app.tone-light .railtag{color:#5D6B72;border-right-color:rgba(20,27,30,.16)}
+#app.tone-light .rlink{color:rgba(20,27,30,.52)}
+#app.tone-light .rlink:hover,#app.tone-light .rlink[aria-current="true"]{color:#101719}
+#app.tone-light.img-on .thumb{border-color:rgba(20,27,30,.3)}
+#app.tone-light .thumb b{color:#3B4A50}
+#app.tone-light .thumb.has-img b{background:linear-gradient(transparent,rgba(243,244,239,.96));color:#1C3040}
+#app.tone-light .spot{background:rgba(10,14,16,.44)}
+#app.tone-light .spot:hover,#app.tone-light .spot:focus-visible{background:rgba(10,14,16,.62)}
+#editBtn,#textBtn{display:none}
+
+/* ---------- link editor ---------- */
+.coord{display:none;font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;padding:5px 7px;background:var(--accent-deep);color:#fff;margin-right:10px;white-space:nowrap;border-radius:999px}
+#app.editing .coord{display:inline-block}
+#app.editing .spot{cursor:grab;touch-action:none;max-width:none;overflow:visible;animation:none;border-color:var(--accent);background:rgba(10,14,16,.62)}
+#app.editing .spot:active{cursor:grabbing}
+#app.editing .spot .txt{opacity:1;transform:none}
+#app.editing .spot .arw{color:var(--accent)}
+#app.editing #stage::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(rgba(90,175,200,.16) 1px,transparent 1px) 0 0/100% 10%,
+             linear-gradient(90deg,rgba(90,175,200,.16) 1px,transparent 1px) 0 0/10% 100%;
+}
+#editbar{
+  position:absolute;left:50%;bottom:72px;transform:translateX(-50%);z-index:46;display:none;
+  align-items:center;gap:8px;padding:9px 10px;background:var(--panel);border:1px solid var(--line);
+  box-shadow:0 18px 44px rgba(0,0,0,.5);max-width:calc(100vw - 32px);
+}
+#app.editing #editbar{display:flex}
+#editbar code{font-size:10.5px;background:none;color:var(--ink-2);white-space:nowrap;overflow-x:auto;max-width:44vw;padding:0}
+#editbar button{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);padding:8px 10px;color:var(--ink-2);white-space:nowrap;transition:color .2s,border-color .2s}
+#editbar button:hover{color:var(--ink);border-color:var(--ink-3)}
+#editbar button.pri{border-color:var(--accent-deep);color:var(--accent)}
+#editBtn[aria-pressed="true"],#textBtn[aria-pressed="true"]{background:var(--accent-deep);opacity:1;color:#fff}
+#app.editing-text #caption [contenteditable]{outline:1px dashed rgba(90,175,200,.65);outline-offset:.3em;border-radius:2px;cursor:text}
+#app.editing-text #caption [contenteditable]:focus{outline:1.5px solid var(--accent);background:rgba(90,175,200,.10)}
+#app.editing-text #caption{overflow:visible}
+/* ---------- big contained framing: the landing image uses the whole stage ---------- */
+@media (min-width:861px){
+  #app #stage.fit-contain.fit-big{padding:4.4em 1.2em 4.6em;background-position:center 50%}
+  #app.fit-big:not(.fit-clear) #caption{max-width:min(30em,34vw)}
+  #app.fit-big:not(.fit-clear) #caption p.body{max-width:none}
+  #app.fit-clear #stage.fit-big{background-position:center 38%}
+  #app.has-strip #stage.fit-contain.fit-big{padding-bottom:11.8em}
+  #app.fit-big.tone-light #scrim{display:none}   /* a drawing on paper needs no wash under the chrome */
+  #app.fit-big.tone-light .spot{background:rgba(28,48,64,.86);border-color:#fff}
+  #app.fit-big.tone-light .spot:hover,#app.fit-big.tone-light .spot:focus-visible{background:rgba(28,48,64,.96)}
+}
+
+/* ---------- Technical Studies library ---------- */
+#app.lib-on #board{background:radial-gradient(120% 100% at 80% 0%,#161D21 0%,#0B0F11 70%)}
+#app.lib-on #backFront,#app.lib-on #drawCorner{display:none}
+.lib{padding:6.2em calc(var(--gut) + 1em) 6.4em;max-width:118em;margin:0 auto}
+.lib-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4em 2em;align-items:end;margin-bottom:2.2em}
+.lib-head .eyebrow{grid-column:1/-1;margin:0}
+.lib-head h1{font-family:var(--f-display);font-variation-settings:"wdth" 92;font-weight:800;text-transform:uppercase;
+  line-height:.92;font-size:3.7em;margin:0;color:var(--on-scene)}
+.lib-intro{grid-column:1;margin:.6em 0 0;max-width:46em;font-size:1em;line-height:1.55;color:#C7D2D6}
+.lib-filter{grid-column:2;grid-row:2/4;display:flex;gap:.5em;flex-wrap:wrap;justify-content:flex-end}
+.lib-filter button{font-family:var(--f-mono);font-size:.74em;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  padding:.75em 1.2em;border:1px solid rgba(246,246,244,.22);border-radius:999px;color:var(--ink-2);transition:all .2s}
+.lib-filter button:hover{color:var(--on-scene);border-color:rgba(246,246,244,.5)}
+.lib-filter button[aria-pressed="true"]{background:var(--on-scene);border-color:var(--on-scene);color:#0B0F11}
+.lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(19em,1fr));gap:1.4em}
+.lib-card{display:flex;flex-direction:column;text-align:left;padding:0;border:1px solid var(--line);background:var(--panel);
+  border-radius:.3em;overflow:hidden;transition:transform .3s cubic-bezier(.2,.75,.25,1),border-color .25s,box-shadow .3s}
+.lib-card[hidden]{display:none}
+.lib-card:hover,.lib-card:focus-visible{transform:translateY(-4px);border-color:var(--accent-deep);box-shadow:0 1.2em 2.6em rgba(0,0,0,.45)}
+.lib-cover{position:relative;display:block;aspect-ratio:4/3;background:#F3F4EF center/cover no-repeat;transition:filter .3s}
+.lib-card:hover .lib-cover{filter:brightness(1.06)}
+.lib-fade{position:absolute;inset:0;background:#F3F4EF center/cover no-repeat;opacity:0;transition:opacity .6s ease}
+.lib-cover i,.lib-cover em{z-index:1}
+.lib-cover i,.lib-cover em{position:absolute;top:.8em;font-family:var(--f-mono);font-style:normal;font-size:.62em;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;padding:.55em .8em;border-radius:999px;background:rgba(8,11,13,.78);color:#fff}
+.lib-cover i{left:.8em}
+.lib-cover em{right:.8em;color:#8FD3E8}
+.lib-body{display:flex;flex-direction:column;gap:.45em;padding:1em 1.1em 1.15em}
+.lib-body b{font-family:var(--f-display);font-weight:700;font-size:1.12em;letter-spacing:.04em;text-transform:uppercase;color:var(--on-scene)}
+.lib-meta{font-family:var(--f-mono);font-size:.68em;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.lib-tools{display:flex;flex-wrap:wrap;gap:.4em;margin-top:.2em}
+.lib-tools i{font-style:normal;font-family:var(--f-mono);font-size:.62em;letter-spacing:.1em;padding:.35em .6em;
+  border:1px solid rgba(90,175,200,.4);border-radius:.25em;color:#8FD3E8}
+@media (max-width:860px){.lib{padding:5em 1em 6em}.lib-head{grid-template-columns:1fr}.lib-filter{grid-column:1;grid-row:auto;justify-content:flex-start}
+  .lib-head h1{font-size:2.6em}.lib-grid{grid-template-columns:repeat(auto-fill,minmax(14em,1fr));gap:1em}}
+
+/* ---------- close-up zoom callouts ---------- */
+#zooms{position:absolute;z-index:26;pointer-events:none}
+#zooms .zcone{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+#zooms .zcone line{stroke:rgba(255,255,255,.9);stroke-width:1.4;filter:drop-shadow(0 0 3px rgba(0,0,0,.55))}
+#zooms .zcone .zfill{fill:rgba(255,255,255,.07)}
+#zooms .zlens{position:absolute;pointer-events:auto;border-radius:50%;border:1.6px solid #fff;
+  background:rgba(255,255,255,.08);box-shadow:0 0 0 1px rgba(0,0,0,.35),0 0 1.2em rgba(255,255,255,.35) inset;
+  transition:background .25s}
+#zooms .zlens:hover{background:rgba(255,255,255,.2)}
+#zooms .zinset{position:absolute;pointer-events:auto;padding:0;background-size:cover;background-position:center;
+  border:1.6px solid #fff;border-radius:.2em;box-shadow:0 .8em 2.2em rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.3);
+  transition:transform .3s cubic-bezier(.2,.75,.25,1),box-shadow .3s;transform-origin:center}
+#zooms .zinset:hover,#zooms .zinset:focus-visible{transform:scale(1.04);box-shadow:0 1.2em 2.8em rgba(0,0,0,.65),0 0 0 1px rgba(0,0,0,.3)}
+#zooms .zinset span{position:absolute;left:0;right:0;bottom:0;padding:1.6em .7em .5em;text-align:left;
+  font-family:var(--f-mono);font-size:.62em;letter-spacing:.16em;text-transform:uppercase;color:#fff;
+  background:linear-gradient(transparent,rgba(6,9,10,.82))}
+#app.board-on #zooms{display:none}
+#lightbox{position:absolute;inset:0;z-index:90;background:rgba(6,9,10,.94);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1em;padding:4.5em 2em 3em;cursor:zoom-out;animation:fade .25s ease both}
+#lightbox[hidden]{display:none}
+#lightbox .lb-img{width:100%;flex:1;background-size:contain;background-position:center;background-repeat:no-repeat}
+#lightbox .lb-cap{margin:0;font-family:var(--f-mono);font-size:.75em;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2)}
+
+/* ---------- drawings shortcut (top-right corner) ---------- */
+#drawCorner{position:absolute;z-index:40;right:clamp(1em,3.2vw,2.8em);top:4.7em;display:flex;gap:.5em;
+  padding:.35em;border:1px solid rgba(246,246,244,.28);border-radius:.3em;background:rgba(8,11,13,.62);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);box-shadow:0 .6em 1.8em rgba(0,0,0,.35)}
+#drawCorner[hidden]{display:none}
+#drawCorner .dcb{display:flex;flex-direction:column;align-items:stretch;gap:.35em;padding:0;border-radius:.2em;transition:transform .25s}
+#drawCorner .dcb:hover,#drawCorner .dcb:focus-visible{transform:translateY(-2px)}
+#drawCorner .dthumb{display:block;width:5.4em;height:5.2em;border-radius:.18em;background:#F3F4EF center/contain no-repeat;
+  border:1px solid rgba(255,255,255,.14);transition:border-color .25s}
+#drawCorner .dcb:hover .dthumb{border-color:var(--accent)}
+#drawCorner b{font-family:var(--f-mono);font-weight:500;font-size:.62em;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--on-scene);text-align:center;padding-bottom:.15em}
+@media (max-width:860px){#drawCorner{top:4.2em}#drawCorner .dthumb{display:none}#drawCorner b{padding:.6em .7em}}
+#app.editing #drawCorner,#app.editing-text #drawCorner{display:none}
+
+/* ---------- hover magnifier on drawing sheets ---------- */
+#app.loupe-on #stage{cursor:crosshair;touch-action:none}
+#loupe{position:absolute;z-index:27;width:20.4em;height:20.4em;border-radius:50%;pointer-events:none;
+  transform:translate(-50%,-50%);background-color:#F3F4EF;background-repeat:no-repeat;
+  border:2px solid #1C3040;box-shadow:0 0 0 5px rgba(243,244,239,.85),0 1em 2.6em rgba(0,0,0,.35)}
+#loupe[hidden]{display:none}
+#caption .loupehint{display:inline-flex;align-items:center;gap:.7em;margin:0 0 1.3em;padding:.7em 1.15em .7em .9em;
+  font-family:var(--f-mono);font-size:.8em;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;
+  color:#fff;background:#1C3040;border-radius:999px;box-shadow:0 .5em 1.4em rgba(28,48,64,.28);text-shadow:none}
+#caption .loupehint svg{width:1.35em;height:1.35em;flex:0 0 auto;fill:none;stroke:#8FD3E8;stroke-width:2.2;stroke-linecap:round}
+#caption .loupehint i{font-style:normal;color:#8FD3E8;margin:0 .1em}
+
+/* ---------- back to the landing scene ---------- */
+#app.p6-room #backFront{font-size:1.35em;padding:.55em 1.3em .55em 1.1em;border:1.5px solid rgba(246,246,244,.9);border-radius:999px;
+  background:rgba(8,11,13,.72);animation:beacon 2.9s cubic-bezier(.25,.6,.35,1) infinite}
+#app.p6-room #backFront .blab{font-size:.8em;letter-spacing:.2em}
+#app.p6-room #backFront .blab i{font-size:1.4em}
+#app.p6-room #backFront:hover,#app.p6-room #backFront:focus-visible{animation:none;border-color:var(--accent);background:rgba(8,11,13,.88)}
+#app.p6-room.tone-light #backFront{background:rgba(28,48,64,.9);border-color:#fff}
+#backFront{position:absolute;z-index:40;left:clamp(1em,3.2vw,2.8em);top:4.7em;display:flex;align-items:center;gap:.8em;
+  padding:.35em .9em .35em .35em;border:1px solid rgba(246,246,244,.28);border-radius:.3em;
+  background:rgba(8,11,13,.62);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
+  box-shadow:0 .6em 1.8em rgba(0,0,0,.35);transition:border-color .25s,background .25s,transform .25s}
+#backFront[hidden]{display:none}
+#backFront:hover,#backFront:focus-visible{border-color:var(--accent);background:rgba(8,11,13,.82);transform:translateY(-2px)}
+#backFront .bthumb{display:block;width:6.4em;height:3.6em;border-radius:.18em;background-repeat:no-repeat;background-position:center;
+  border:1px solid rgba(255,255,255,.12)}
+#backFront .bthumb[hidden]{display:none}
+#backFront .blab{display:flex;align-items:center;gap:.7em;font-family:var(--f-mono);font-size:.72em;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--on-scene);white-space:nowrap}
+#backFront .blab i{font-style:normal;font-size:1.25em;letter-spacing:0;color:var(--accent);transition:transform .25s}
+#backFront:hover .blab i{transform:translateX(-.25em)}
+@media (max-width:860px){#backFront{top:4.2em;padding:.5em .8em}#backFront .bthumb{display:none}}
+#app.editing #backFront,#app.editing-text #backFront{display:none}
+
+/* ---------- material schedule slide ---------- */
+#board{position:absolute;inset:0;z-index:20;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;
+  background:radial-gradient(120% 100% at 78% 8%,#161D21 0%,#0B0F11 68%)}
+#board::-webkit-scrollbar{display:none}
+#app.board-on #scrim,#app.board-on #vignette,#app.board-on #slotcard,
+#app.board-on #caption,#app.board-on #spots,#app.board-on #marks{display:none}
+#app.board-on #stage::after{display:none}
+.bd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1.4em 2.6em;
+  /* extra side padding keeps the schedule clear of the prev/next arrows */
+  padding:5.4em calc(var(--gut) + 3.6em) 5.6em;min-height:100%;align-content:center}
+.bd-lock{display:flex;align-items:baseline;gap:.55em;margin:0 0 .7em}
+.bd-lock b{font-family:var(--f-display);font-weight:800;font-size:1.5em;letter-spacing:.06em;color:var(--ink)}
+.bd-lock i{font-style:normal;font-size:1.1em;color:var(--ink-3)}
+.bd-lock s{text-decoration:none;font-family:var(--f-display);font-weight:400;font-size:1.5em;
+  letter-spacing:.04em;color:var(--accent)}
+.bd-intro{margin:0;max-width:34em;font-family:var(--f-body);font-size:.94em;line-height:1.62;color:#C7D2D6}
+.bd-plan{grid-column:2;grid-row:1;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:.5em}
+.bd-plan img{width:13.5em;max-width:34vw;border:1px solid var(--line);border-radius:.2em;display:block;
+  filter:grayscale(1) contrast(1.06)}
+.bd-ttl{font-family:var(--f-display);line-height:1.2}
+.bd-ttl span{display:block;font-size:.7em;letter-spacing:.22em;color:var(--accent)}
+.bd-ttl b{display:block;font-size:.95em;font-weight:700;letter-spacing:.1em;color:var(--ink)}
+.bd-credit{margin:0;font-family:var(--f-mono);font-size:.64em;letter-spacing:.08em;color:var(--ink-3)}
+.bd-grid{grid-column:1/-1;list-style:none;margin:.3em 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55em 2.6em}
+.bd-grid li{min-width:0;display:flex;gap:.9em;align-items:flex-start;
+  padding-bottom:.55em;border-bottom:1px solid rgba(255,255,255,.07)}
+/* the board is a 1270px screenshot, so the swatches are kept small on purpose —
+   blown up they just show the source's softness */
+.bd-sw{flex:0 0 auto;width:4.4em;height:3.2em;background-size:cover;background-position:center;
+  border-radius:.16em;border:1px solid rgba(255,255,255,.14);box-shadow:0 .35em .9em rgba(0,0,0,.45)}
+.bd-txt{min-width:0;padding-top:.05em}
+.bd-no{font-family:var(--f-mono);font-size:.62em;letter-spacing:.12em;color:var(--accent);margin-right:.7em}
+.bd-nm{font-family:var(--f-display);font-size:.84em;font-weight:600;letter-spacing:.03em;color:var(--ink)}
+.bd-sp{display:block;margin-top:.2em;font-family:var(--f-mono);font-size:.58em;line-height:1.5;
+  letter-spacing:.03em;color:var(--ink-2)}
+.bd-notes{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4em;
+  margin-top:.5em;padding-top:1.1em;border-top:1px solid var(--line)}
+.bd-notes p{margin:0;font-family:var(--f-body);font-size:.78em;line-height:1.55;color:var(--ink-2)}
+.bd-notes b{font-family:var(--f-mono);font-size:.82em;letter-spacing:.1em;color:var(--ink);display:block;margin-bottom:.25em}
+
+@media (max-width:900px){.bd{grid-template-columns:minmax(0,1fr);padding-bottom:6.4em;
+    padding-left:var(--gut);padding-right:var(--gut);align-content:start}
+  .bd-plan{grid-column:1;grid-row:auto;align-items:flex-start;text-align:left}
+  .bd-grid{grid-template-columns:minmax(0,1fr)}
+  .bd-notes{grid-template-columns:minmax(0,1fr)}}
+
+
+/* ---------- material callouts ---------- */
+#marks{position:absolute;z-index:26;pointer-events:none;overflow:visible}
+#stage.has-img.no-kb{animation:none}
+.mark{position:absolute;pointer-events:auto;z-index:1}
+.mark:hover,.mark.open{z-index:5}
+.mark .dot{position:absolute;left:-.22em;top:-.22em;width:.44em;height:.44em;border-radius:50%;
+  background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.45),0 0 .7em rgba(255,255,255,.55)}
+.mark .lead{position:absolute;left:0;top:0;height:1px;transform-origin:0 50%;
+  background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.92));
+  box-shadow:0 0 .5em rgba(0,0,0,.5)}
+.mark .lab{position:absolute;padding:.3em .5em;border-radius:.28em;border:1px solid transparent;
+  transition:background .18s ease,border-color .18s ease}
+.mark.l .lab{transform:translateX(-100%)}
+.mark:hover .lab,.mark.open .lab{background:rgba(7,10,12,.9);border-color:rgba(255,255,255,.16)}
+.mark .mt{display:block;font-family:var(--f-mono);font-size:.68em;font-weight:500;letter-spacing:.09em;
+  text-transform:uppercase;color:#fff;white-space:nowrap;text-shadow:0 1px .5em rgba(0,0,0,.85)}
+.mark .md{max-height:0;opacity:0;overflow:hidden;width:16em;
+  transition:max-height .26s ease,opacity .2s ease,margin-top .26s ease}
+.mark:hover .md,.mark.open .md{max-height:14em;opacity:1;margin-top:.45em}
+.mark .md p{margin:0 0 .3em}
+.mark .md .sp{font-family:var(--f-mono);font-size:.62em;letter-spacing:.045em;color:#AFC0C6;white-space:nowrap}
+.mark .md .nt{font-family:var(--f-body);font-size:.72em;line-height:1.45;color:#D3DCDE}
+#app.tone-light .mark .mt{color:#0E1416;text-shadow:0 1px .5em rgba(255,255,255,.85)}
+#app.tone-light .mark:hover .mt,#app.tone-light .mark.open .mt{color:#fff;text-shadow:none}
+@media (max-width:700px){#marks{display:none}}
+.savestate{font-family:var(--f-mono);font-size:11px;letter-spacing:.04em;color:var(--ink-3);white-space:nowrap;margin-left:2px}
+.savestate.ok{color:#6FBF8A}
+.savestate.work{color:var(--accent)}
+.savestate.warn{color:#E0A33E}
+.savestate.err{color:#E4736B}
+#app.tone-light.editing-text #caption [contenteditable]:focus{background:rgba(31,110,136,.12)}
+#textbar{
+  position:absolute;left:50%;bottom:5.2em;transform:translateX(-50%);z-index:46;display:none;
+  align-items:center;gap:.6em;padding:.65em .72em;background:var(--panel);border:1px solid var(--line);
+  box-shadow:0 18px 44px rgba(0,0,0,.5);max-width:calc(100vw - 2.4em);
+}
+#app.editing-text #textbar{display:flex}
+#textbar span{font-family:var(--f-mono);font-size:.75em;letter-spacing:.14em;color:var(--ink-2);white-space:nowrap}
+#textbar button{font-family:var(--f-mono);font-size:.68em;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);padding:.85em 1.1em;color:var(--ink-2);white-space:nowrap;transition:color .2s,border-color .2s}
+#textbar button:hover{color:var(--ink);border-color:var(--ink-3)}
+#textbar button.pri{border-color:var(--accent-deep);color:var(--accent)}
+@media (max-width:860px){#editbar{left:12px;right:12px;transform:none;bottom:60px;flex-wrap:wrap}#editbar code{max-width:100%}}
+#slotcard{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);text-align:center;z-index:5;display:flex;flex-direction:column;align-items:center;gap:13px;pointer-events:none}
+#slotcard .id{font-family:var(--f-mono);font-size:3.1em;font-weight:500;letter-spacing:.06em;color:var(--ink)}
+#slotcard .st{font-family:var(--f-mono);font-size:.75em;letter-spacing:.26em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--line);padding:.8em 1.35em}
+
+/* ---------- top bar ---------- */
+#top{position:absolute;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1em;padding:1.15em clamp(1em,3.2vw,2.8em)}
+#topL,#topR{display:flex;align-items:center;gap:6px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none;margin-right:12px}
+.brand b{font-family:var(--f-display);font-variation-settings:"wdth" 112;font-weight:700;font-size:1.32em;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.brand span{font-family:var(--f-mono);font-size:.86em;font-weight:500;letter-spacing:.2em;color:#B4C0C5;text-transform:uppercase;white-space:nowrap}
+.tlink{font-family:var(--f-mono);font-size:.9em;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--on-scene);padding:.8em 1.1em;border-radius:2px;opacity:.94;transition:opacity .2s,background .2s;white-space:nowrap}
+.tlink:hover,.tlink[aria-expanded="true"]{opacity:1;background:rgba(255,255,255,.08)}
+.tcount{font-family:var(--f-mono);font-size:.86em;font-weight:500;letter-spacing:.14em;color:#B4C0C5;border:1px solid rgba(255,255,255,.22);padding:.6em .9em;border-radius:2px;white-space:nowrap}
+.caret{display:inline-block;margin-left:.62em;width:0;height:0;
+  border-left:.32em solid transparent;border-right:.32em solid transparent;
+  border-top:.34em solid currentColor;transform:translateY(-.08em);transition:transform .2s}
+#projBtn[aria-expanded="true"] .caret{transform:translateY(-.08em) rotate(180deg)}
+
+#app:not(.tone-light) #top .brand,#app:not(.tone-light) #top .tlink{text-shadow:0 1px 10px rgba(0,0,0,.55)}
+
+/* ---------- dropdown ---------- */
+.dd{position:relative}
+.ddmenu{
+  position:absolute;top:calc(100% + 8px);left:0;min-width:232px;z-index:60;
+  background:var(--panel);border:1px solid var(--line);padding:6px;
+  display:none;box-shadow:0 22px 50px rgba(0,0,0,.55);
+}
+.ddmenu.open{display:block;animation:drop .18s ease both}
+@keyframes drop{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.dditem{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;width:100%;text-align:left;
+  padding:11px 12px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--ink-2);transition:background .18s,color .18s;
+}
+.dditem:hover{background:var(--panel-2);color:var(--ink)}
+.dditem[aria-current="true"]{color:var(--accent)}
+.dditem i{font-style:normal;font-size:9px;letter-spacing:.12em;color:var(--ink-3)}
+.ddrule{height:1px;background:var(--line);margin:6px 0}
+
+/* ---------- hotspots ---------- */
+#spots{position:absolute;inset:0;z-index:25;pointer-events:none;transition:left .25s,top .25s,width .25s,height .25s}
+#spots .spot{pointer-events:auto}
+.spot{
+  position:absolute;display:inline-flex;align-items:center;font-size:.75em;height:3.15em;
+  max-width:3.15em;overflow:hidden;border-radius:999px;
+  border:1.5px solid rgba(255,255,255,.94);background:rgba(10,14,16,.30);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
+  transform:translate(-1.575em,-50%);
+  transition:max-width .5s cubic-bezier(.2,.75,.25,1),background .3s,border-color .3s;
+  animation:beacon 2.9s cubic-bezier(.25,.6,.35,1) infinite;
+}
+.spot .arw{flex:0 0 2.93em;display:grid;place-items:center;color:#fff;font-size:1.14em;line-height:1;font-family:var(--f-mono)}
+.spot .txt{
+  font-family:var(--f-mono);font-size:.79em;letter-spacing:.17em;text-transform:uppercase;color:#fff;
+  white-space:nowrap;padding-right:2em;opacity:0;transform:translateX(-8px);
+  transition:opacity .28s .06s,transform .4s cubic-bezier(.2,.75,.25,1) .04s;
+}
+.spot:hover,.spot:focus-visible{max-width:26em;background:rgba(10,14,16,.5);animation:none;box-shadow:0 6px 26px rgba(0,0,0,.34)}
+.spot:hover .txt,.spot:focus-visible .txt{opacity:1;transform:none}
+.spot.flip{flex-direction:row-reverse;transform:translate(calc(-100% + 1.575em),-50%)}
+.spot.flip .txt{padding-right:0;padding-left:2em;transform:translateX(8px)}
+.spot.flip:hover .txt,.spot.flip:focus-visible .txt{transform:none}
+@keyframes beacon{
+  0%  {box-shadow:0 2px 16px rgba(0,0,0,.3), 0 0 0 0 rgba(255,255,255,.5)}
+  70% {box-shadow:0 2px 16px rgba(0,0,0,.3), 0 0 0 16px rgba(255,255,255,0)}
+  100%{box-shadow:0 2px 16px rgba(0,0,0,.3), 0 0 0 0 rgba(255,255,255,0)}
+}
+
+/* ---------- view arrows ---------- */
+.navarrow{
+  position:absolute;top:50%;z-index:28;width:2.4em;height:2.4em;display:none;
+  align-items:center;justify-content:center;border-radius:50%;
+  border:1.5px solid rgba(255,255,255,.94);background:rgba(10,14,16,.30);
+  -webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);
+  transform:translateY(-50%);
+  transition:background .25s,transform .25s,border-color .25s;
+  animation:beacon 2.9s cubic-bezier(.25,.6,.35,1) infinite;
+}
+#app.multi .navarrow{display:flex}
+.navarrow i{display:block;width:0;height:0;border-top:.36em solid transparent;border-bottom:.36em solid transparent}
+#prevView{left:var(--gut)}
+#prevView i{border-right:.44em solid #fff;margin-right:.12em}
+#nextView{right:var(--gut)}
+#nextView i{border-left:.44em solid #fff;margin-left:.12em}
+.navarrow:hover,.navarrow:focus-visible{background:rgba(10,14,16,.58);animation:none;
+  box-shadow:0 6px 26px rgba(0,0,0,.34);transform:translateY(-50%) scale(1.08)}
+#app.tone-light .navarrow{background:rgba(10,14,16,.44)}
+#app.tone-light .navarrow:hover,#app.tone-light .navarrow:focus-visible{background:rgba(10,14,16,.66)}
+@media (max-width:860px){
+  /* keep them over the render, not over the copy stacked beneath it */
+  .navarrow{top:30vh;bottom:auto;transform:translateY(-50%)}
+  .navarrow:hover,.navarrow:focus-visible{transform:translateY(-50%) scale(1.08)}
+  #caption{left:1em}
+}
+
+/* ---------- caption ---------- */
+#caption{position:absolute;left:var(--capleft);bottom:7em;z-index:30;
+  max-width:min(26em,36vw);max-height:calc(100dvh - 11em);overflow-y:auto;scrollbar-width:none}
+#caption::-webkit-scrollbar{display:none}
+.eyebrow{font-family:var(--f-mono);font-size:.72em;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 1.35em}
+#caption h1{font-family:var(--f-display);font-variation-settings:"wdth" 92;font-weight:800;text-transform:uppercase;line-height:.92;font-size:3.7em;margin:0 0 .3em;text-wrap:balance;color:var(--ink-3)}
+#caption p.body{font-size:1em;line-height:1.46;color:var(--ink-3);margin:0 0 .8em;font-weight:400;max-width:42ch;font-style:italic}
+#caption p.body:last-of-type{margin-bottom:1.2em}
+.meta{display:flex;flex-wrap:wrap;gap:0 1em;font-family:var(--f-mono);font-size:.72em;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.meta span+span::before{content:"/";margin-right:1em;color:#3A464C}
+.anim{animation:rise .6s cubic-bezier(.2,.7,.3,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- view strip ---------- */
+#strip{position:absolute;right:clamp(1em,3.2vw,2.8em);bottom:7em;z-index:30;display:flex;align-items:flex-end;gap:.72em;max-width:52vw;overflow-x:auto;padding-bottom:.3em;scrollbar-width:none}
+#strip::-webkit-scrollbar{display:none}
+.thumb{position:relative;flex:0 0 auto;width:6.9em;height:4.45em;border:1px dashed rgba(147,161,167,.3);background:rgba(255,255,255,.02);transition:border-color .3s,transform .3s,background .3s;display:flex;align-items:center;justify-content:center}
+.thumb:hover{transform:translateY(-3px);background:rgba(255,255,255,.05)}
+.thumb[aria-current="true"]{border-style:solid;border-color:var(--accent);background:rgba(90,175,200,.09)}
+.thumb b{font-family:var(--f-mono);font-size:.79em;letter-spacing:.12em;color:var(--ink-2);font-weight:500}
+.thumb.has-img{background-size:cover;background-position:center;border-style:solid;border-color:rgba(246,246,244,.26);filter:saturate(.8) brightness(.82);transition:filter .3s,border-color .3s,transform .3s}
+.thumb.has-img:hover,.thumb.has-img[aria-current="true"]{filter:none}
+.thumb.has-img b{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(6,9,10,.9));color:var(--on-scene);font-size:9px;padding:4px 0 3px}
+.thumb[aria-current="true"] b{color:var(--on-scene)}
+
+/* ---------- room rail ---------- */
+#rail{position:absolute;left:0;right:0;bottom:0;z-index:35;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;padding:0 clamp(.7em,2.4vw,2.2em);background:linear-gradient(transparent,rgba(6,9,10,.86) 55%);border-top:1px solid rgba(246,246,244,.12);height:4.2em}
+#rail::-webkit-scrollbar{display:none}
+.railtag{flex:0 0 auto;font-family:var(--f-mono);font-size:.72em;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);padding-right:1.6em;margin-right:.8em;border-right:1px solid var(--line);white-space:nowrap}
+.rlink{position:relative;flex:0 0 auto;font-family:var(--f-mono);font-size:.75em;padding:1.8em 1.33em 1.7em;letter-spacing:.2em;text-transform:uppercase;color:rgba(246,246,244,.5);transition:color .25s;white-space:nowrap}
+.rlink:hover,.rlink[aria-current="true"]{color:var(--on-scene)}
+.rlink[aria-current="true"]::after{content:"";position:absolute;left:1.33em;right:1.33em;bottom:1.1em;height:1px;background:var(--accent)}
+
+/* ---------- overlays ---------- */
+.sheet{position:absolute;inset:0;z-index:70;background:rgba(7,10,12,.97);display:none;overflow-y:auto}
+.sheet.open{display:block;animation:fade .3s ease both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.sheet-in{max-width:1060px;margin:0 auto;padding:clamp(70px,9vh,110px) clamp(20px,4vw,44px) 80px}
+.close{position:absolute;top:16px;right:clamp(16px,3.2vw,38px);z-index:5;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);padding:9px 13px;color:var(--ink-2);transition:color .2s,border-color .2s}
+.close:hover{color:var(--ink);border-color:var(--ink-3)}
+.sheet h2{font-family:var(--f-display);font-variation-settings:"wdth" 88;font-weight:800;text-transform:uppercase;font-size:clamp(26px,4.2vw,46px);line-height:.95;margin:0 0 12px;letter-spacing:-.01em}
+.lede{font-size:16.5px;line-height:1.65;font-weight:300;color:#C8D2D4;margin:0 0 34px;max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{text-align:left;display:block;border:1px solid var(--line);background:var(--panel);transition:border-color .25s,transform .25s;padding:0}
+.card:hover{border-color:var(--accent-deep);transform:translateY(-3px)}
+.card .ph{aspect-ratio:16/10;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(45deg,rgba(255,255,255,.02) 0 2px,transparent 2px 11px)}
+.card .ph b{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;color:var(--ink-3);font-weight:500}
+.card .cb{padding:12px 13px 15px}
+.card .cn{font-family:var(--f-display);font-variation-settings:"wdth" 100;font-weight:700;text-transform:uppercase;letter-spacing:.09em;font-size:13px;margin:0 0 6px}
+.card .cs{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0}
+
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,60px);align-items:start}
+.about-bio p{font-family:var(--f-body);font-size:16.5px;line-height:1.68;font-weight:300;color:#C8D2D4;margin:0 0 20px;max-width:60ch}
+.about-bio p:last-child{margin-bottom:0}
+.about-side{display:flex;flex-direction:column;gap:22px}
+.about-photo{width:100%;aspect-ratio:3/4;background-size:cover;background-position:center;border:1px solid var(--line);border-radius:.2em}
+@media (max-width:700px){.about-side{order:-1}.about-photo{max-width:220px}}
+
+.ph-line{height:12px;background:rgba(147,161,167,.09);border-left:2px solid var(--line);margin-bottom:11px}
+.ph-line.s{width:62%}
+.ph-line.m{width:88%}
+.dl{border-top:1px solid var(--line)}
+.dl div{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+.dl dt{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0}
+.dl dd{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);margin:0;text-align:right}
+
+table.map{width:100%;border-collapse:collapse;font-family:var(--f-mono);font-size:11.5px}
+table.map th{text-align:left;font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:9.5px;color:var(--ink-3);padding:0 14px 10px 0;border-bottom:1px solid var(--line)}
+table.map td{padding:10px 14px 10px 0;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+table.map td:first-child{color:var(--accent);white-space:nowrap}
+.scrollx{overflow-x:auto}
+code{font-family:var(--f-mono);font-size:11.5px;color:var(--accent);background:rgba(90,175,200,.1);padding:2px 6px}
+
+@media (max-width:1080px){.brand span{display:none}}
+
+/* medium windows: the copy takes a left column, the render takes what is left */
+/* wide windows: a small left inset keeps the model clear of the copy without shrinking it */
+@media (min-width:1601px){
+  #stage.fit-contain{padding-left:calc(12vw + 6em)}
+}
+
+@media (min-width:861px) and (max-width:1600px){
+  #caption{max-width:min(24em,30vw)}
+  #stage.fit-contain{
+    padding-left:calc(var(--capleft) + min(24em,30vw) + 1.8em);
+    padding-right:1.2em;
+    padding-bottom:5.5em;
+    background-position:center 46%;
+  }
+}
+@media (max-width:860px){
+  #caption{left:1em;right:1em;bottom:10.6em;max-width:none;max-height:calc(100dvh - 15em)}
+  #caption p.body{font-size:.96em;max-width:none}
+  #caption h1{font-size:3.1em}
+  #strip{left:1em;right:1em;bottom:4.7em;max-width:none;justify-content:flex-start}
+  .thumb{width:5.6em;height:3.7em}
+  #rail{height:3.7em}
+  .rlink{padding:1.5em 1.05em}
+  .hide-s{display:none}
+  #stage::after{inset:.85em .85em 4.7em}
+  #stage.fit-contain{padding:4.6em .8em 40vh;background-position:center 34%}
+  #slotcard{top:38%}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:700px){#spots{display:none}}
+@media (max-width:560px){#top{padding:.95em 1em;gap:.45em}.brand{margin-right:.15em}.brand b{font-size:.95em;letter-spacing:.1em}.tlink{padding:.8em .75em;font-size:.8em;letter-spacing:.1em}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.14s!important}}
+</style>
+
+<div id="app">
+  <div id="stage"></div>
+  <div id="scrim"></div>
+  <div id="vignette"></div>
+  <div id="slotcard"></div>
+
+  <header id="top">
+    <div id="topL">
+      <a class="brand" href="#/p1/front"><b>Carl Moscoso</b><span>Interior Design</span></a>
+      <div class="dd">
+        <button class="tlink" id="projBtn" aria-expanded="false" aria-haspopup="true">Projects<span class="caret" aria-hidden="true"></span></button>
+        <div class="ddmenu" id="projMenu" role="menu"></div>
+      </div>
+      <button class="tlink" data-sheet="about">About</button>
+    </div>
+    <div id="topR">
+      <button class="tlink hide-s" data-sheet="explore">Explore</button>
+      <button class="tlink" id="editBtn" aria-pressed="false" title="Drag the room links into place">Edit links</button>
+      <button class="tlink" id="textBtn" aria-pressed="false" title="Click any text on the scene to rewrite it">Edit text</button>
+      <span class="tcount hide-s" id="projcount"></span>
+    </div>
+  </header>
+
+  <button id="backFront" data-room="front" hidden>
+    <span class="bthumb" aria-hidden="true"></span>
+    <span class="blab"><i aria-hidden="true">←</i><b></b></span>
+  </button>
+  <nav id="drawCorner" aria-label="Drawings" hidden></nav>
+  <div id="loupe" hidden aria-hidden="true"></div>
+  <div id="spots" hidden></div>
+  <div id="marks" hidden></div>
+  <div id="zooms" hidden></div>
+  <div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Close-up">
+    <div class="lb-img"></div>
+    <p class="lb-cap"></p>
+    <button class="close" id="lbClose">Close</button>
+  </div>
+  <div id="board" hidden></div>
+  <button class="navarrow" id="prevView" aria-label="Previous view"><i aria-hidden="true"></i></button>
+  <button class="navarrow" id="nextView" aria-label="Next view"><i aria-hidden="true"></i></button>
+  <div id="caption"></div>
+  <div id="strip"></div>
+  <nav id="rail" aria-label="Rooms"></nav>
+
+  <div id="textbar" role="group" aria-label="Scene text">
+    <span id="textslot"></span>
+    <button id="copyText" class="pri">Copy text</button>
+    <button id="resetText">Reset</button>
+    <button id="doneText">Done</button>
+    <span class="savestate" id="saveText"></span>
+  </div>
+
+  <div id="editbar" role="group" aria-label="Link positions">
+    <code id="readout"></code>
+    <button id="copyPos" class="pri">Copy</button>
+    <button id="resetPos">Reset</button>
+    <button id="donePos">Done</button>
+    <span class="savestate" id="savePos"></span>
+  </div>
+
+  <section class="sheet" id="sheet-explore" aria-hidden="true">
+    <button class="close" data-close>Close</button>
+    <div class="sheet-in">
+      <h2 id="exploreTitle">Explore</h2>
+      <p class="lede">Every room and view in this project is an empty slot, waiting on an image and its text.</p>
+      <div class="grid" id="exploreGrid"></div>
+    </div>
+  </section>
+
+  <section class="sheet" id="sheet-slots" aria-hidden="true">
+    <button class="close" data-close>Close</button>
+    <div class="sheet-in">
+      <h2>Slot map</h2>
+      <p class="lede">A slot address is <code>P2-R3-V2</code> — project 2, room 3, view 2. The landing scene of a project is <code>P2-FRONT</code>. Name a slot and what goes in it — an image, a title, a paragraph, or the metadata line — and it gets filled in. This table shows the project you're in.</p>
+      <div class="scrollx">
+        <table class="map">
+          <thead><tr><th>Slot</th><th>Where it appears</th><th>Holds</th></tr></thead>
+          <tbody id="mapBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet" id="sheet-about" aria-hidden="true">
+    <button class="close" data-close>Close</button>
+    <div class="sheet-in">
+      <h2>About</h2>
+      <p class="lede">Interior designer &amp; design technologist, based in Toronto.</p>
+      <div class="about">
+        <div class="about-bio">
+          <p>Carl Moscoso is an interior designer and design technologist based in Toronto, holding a three-year Advanced Diploma in Interior Design Technology from George Brown Polytechnic (2023). His work moves between concept and construction — space planning, presentation boards, and full drawing sets built in AutoCAD, Revit, SketchUp, and Rhino, rendered out in Enscape.</p>
+          <p>Before design, six years in retail and e-commerce sharpened a different set of instincts: accuracy under deadline, composure under pressure, and a habit of seeing things through to the end. He has also built and maintained a brand’s website from the ground up, the same eye for composition and consistency he brings to a floor plan.</p>
+        </div>
+        <div class="about-side">
+          <div class="about-photo" style="background-image:url('img/about-photo.jpg')"></div>
+          <dl class="dl" id="aboutDl"></dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script id="app-src">
+/* ---------- canonical source capture (must run before anything renders) ----------
+   publish(html) needs the COMPLETE authored document, and serializing the live DOM
+   would bake in viewer-session state and the injected runtime. So grab the authored
+   markup, css and script text now, while #app is still exactly as served. */
+const SRC = (() => {
+  const css = document.getElementById("app-css");
+  const app = document.getElementById("app");
+  const js  = document.getElementById("app-src");
+  return { css: css ? css.textContent : "", app: app ? app.outerHTML : "", js: js ? js.textContent : "" };
+})();
+const HEAD_SRC = [
+  '<meta charset="utf-8">',
+  '<meta name="viewport" content="width=device-width,initial-scale=1">',
+  '<title>Rooms by Carl Moscoso</title>',
+  '<link rel="preconnect" href="https://fonts.googleapis.com">',
+  '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
+  "<link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..400&family=IBM+Plex+Mono:wght@400;500&display=swap\">"
+].join("\n");
+function pageSource(){
+  const O = "<", C = "</";                       // kept apart so this source never contains a literal close tag
+  const seed = JSON.stringify(SHARED).replace(/</g, "\\u003c");
+  return '<!doctype html>\n<html lang="en">\n<head>\n' + HEAD_SRC + "\n"
+    + O + 'style id="app-css">' + SRC.css + C + "style>\n</head>\n<body>\n"
+    + SRC.app + "\n"
+    + O + 'script type="application/json" id="seed">' + seed + C + "script>\n"
+    + O + 'script id="app-src">' + SRC.js + C + "script>\n</body>\n</html>";
+}
+
+/* ---------- configuration: change these two numbers to resize the site ---------- */
+const PROJECT_COUNT = 6;   // entries in the Projects dropdown
+const ROOMS_PER     = 6;   // rooms after Front, in every project
+const VIEWS_PER     = 5;   // view slots in every room
+
+const PROJECTS = Array.from({length: PROJECT_COUNT}, (_, i) => ({
+  id: "p" + (i + 1),
+  get n(){ return PROJECT_NAMES[this.id] || "Project " + (i + 1); },
+  get rooms(){ return ROOM_COUNT[this.id] || ROOMS_PER; }
+}));
+
+/* ---------- content: filled in slot by slot ---------- */
+const SLOT_IMG   = {"P4-R1-V2": "img/P4-R1-V2.jpg", "P4-R1-V3": "img/P4-R1-V3.jpg", "P4-Z2": "img/P4-Z2.jpg", "P4-Z3": "img/P4-Z3.jpg", "P4-Z4": "img/P4-Z4.jpg", "P5-R2-V2": "img/P5-R2-V2.jpg", "P5-R3-V3": "img/P5-R3-V3.jpg", "P5-R3-V4": "img/P5-R3-V4.jpg", "P5-Z1": "img/P5-Z1.jpg", "P5-R4-V2": "img/P5-R4-V2.jpg", "P5-R4-V3": "img/P5-R4-V3.jpg", "P5-R5-V2": "img/P5-R5-V2.jpg", "P6-R5-V5": "img/P6-R5-V5.jpg", "P6-R5-V6": "img/P6-R5-V6.jpg", "P6-R2-V3": "img/P6-R2-V3.jpg", "P6-R9-V1": "img/P6-R9-V1.jpg", "P6-R9-V2": "img/P6-R9-V2.jpg", "P6-R9-V3": "img/P6-R9-V3.jpg", "P6-R11-V1": "img/P6-R11-V1.jpg", "P6-R11-V2": "img/P6-R11-V2.jpg", "P6-R11-V3": "img/P6-R11-V3.jpg", "P6-R11-V4": "img/P6-R11-V4.jpg", "P6-R11-V5": "img/P6-R11-V5.jpg", "P6-R12-V1": "img/P6-R12-V1.jpg", "P6-R12-V2": "img/P6-R12-V2.jpg", "P6-R12-V3": "img/P6-R12-V3.jpg", "P6-R13-V1": "img/P6-R13-V1.jpg", "P6-R13-V2": "img/P6-R13-V2.jpg", "P6-R14-V1": "img/P6-R14-V1.jpg", "P6-R14-V2": "img/P6-R14-V2.jpg", "P6-R15-V1": "img/P6-R15-V1.jpg", "P6-R16-V1": "img/P6-R16-V1.jpg", "P6-R16-V2": "img/P6-R16-V2.jpg", "P6-R16-V3": "img/P6-R16-V3.jpg", "P6-R16-V4": "img/P6-R16-V4.jpg", "P6-R16-V5": "img/P6-R16-V5.jpg", "P6-R16-V6": "img/P6-R16-V6.jpg", "P6-R16-V7": "img/P6-R16-V7.jpg", "P6-R17-V1": "img/P6-R17-V1.jpg", "P6-R17-V2": "img/P6-R17-V2.jpg", "P6-R17-V3": "img/P6-R17-V3.jpg", "P6-R17-V4": "img/P6-R17-V4.jpg", "P6-R17-V5": "img/P6-R17-V5.jpg", "P6-R17-V6": "img/P6-R17-V6.jpg", "P6-R17-V7": "img/P6-R17-V7.jpg", "P6-R17-V8": "img/P6-R17-V8.jpg", "P6-R17-V9": "img/P6-R17-V9.jpg", "P6-R17-V10": "img/P6-R17-V10.jpg", "P6-R18-V1": "img/P6-R18-V1.jpg", "P6-R18-V2": "img/P6-R18-V2.jpg", "P6-R18-V3": "img/P6-R18-V3.jpg", "P6-R18-V4": "img/P6-R18-V4.jpg", "P6-R18-V5": "img/P6-R18-V5.jpg", "P6-R18-V6": "img/P6-R18-V6.jpg", "P6-R18-V7": "img/P6-R18-V7.jpg", "P6-R18-V8": "img/P6-R18-V8.jpg", "P6-R18-V9": "img/P6-R18-V9.jpg", "P6-R18-V10": "img/P6-R18-V10.jpg", "P6-R18-V11": "img/P6-R18-V11.jpg", "P6-R18-V12": "img/P6-R18-V12.jpg", "P6-R18-V13": "img/P6-R18-V13.jpg", "P6-R19-V1": "img/P6-R19-V1.jpg", "P6-R19-V2": "img/P6-R19-V2.jpg", "P6-R19-V3": "img/P6-R19-V3.jpg", "P6-R19-V4": "img/P6-R19-V4.jpg", "P6-R19-V5": "img/P6-R19-V5.jpg", "P6-R19-V6": "img/P6-R19-V6.jpg", "P6-R2-V1": "img/P6-R2-V1.jpg", "P6-R2-V2": "img/P6-R2-V2.jpg", "P6-R3-V1": "img/P6-R3-V1.jpg", "P6-R3-V2": "img/P6-R3-V2.jpg", "P6-R4-V1": "img/P6-R4-V1.jpg", "P6-R4-V2": "img/P6-R4-V2.jpg", "P6-R5-V1": "img/P6-R5-V1.jpg", "P6-R5-V2": "img/P6-R5-V2.jpg", "P6-R5-V3": "img/P6-R5-V3.jpg", "P6-R5-V4": "img/P6-R5-V4.jpg", "P6-R7-V1": "img/P6-R7-V1.jpg", "P6-R7-V2": "img/P6-R7-V2.jpg", "P6-R7-V3": "img/P6-R7-V3.jpg", "P6-R7-V4": "img/P6-R7-V4.jpg", "P6-R7-V5": "img/P6-R7-V5.jpg", "P6-R7-V6": "img/P6-R7-V6.jpg", "P6-R7-V7": "img/P6-R7-V7.jpg", "P6-R8-V1": "img/P6-R8-V1.jpg", "P6-R8-V2": "img/P6-R8-V2.jpg", "P6-R8-V3": "img/P6-R8-V3.jpg", "P6-R8-V4": "img/P6-R8-V4.jpg", "P6-R8-V5": "img/P6-R8-V5.jpg", "P6-R8-V6": "img/P6-R8-V6.jpg", "P6-R8-V7": "img/P6-R8-V7.jpg", "P6-R8-V8": "img/P6-R8-V8.jpg", "P6-R8-V9": "img/P6-R8-V9.jpg", "P6-R8-V10": "img/P6-R8-V10.jpg", "P6-R8-V11": "img/P6-R8-V11.jpg", "P6-R8-V12": "img/P6-R8-V12.jpg", "P6-R8-V13": "img/P6-R8-V13.jpg", "P5-FRONT": "img/P5-FRONT.jpg", "P5-R1-V1": "img/P5-R1-V1.jpg", "P5-R2-V1": "img/P5-R2-V1.jpg", "P5-R3-V1": "img/P5-R3-V1.jpg", "P5-R3-V2": "img/P5-R3-V2.jpg", "P5-R4-V1": "img/P5-R4-V1.jpg", "P5-R5-V1": "img/P5-R5-V1.jpg", "P5-R6-V1": "img/P5-R6-V1.jpg", "P5-R6-V2": "img/P5-R6-V2.jpg", "P5-R6-V3": "img/P5-R6-V3.jpg", "P1-R7-V1": "img/P1-R7-V1.jpg", "P1-R7-V2": "img/P1-R7-V2.jpg", "P4-FRONT": "img/P4-FRONT.jpg", "P4-R1-V1": "img/P4-R1-V1.jpg", "P4-R2-V1": "img/P4-R2-V1.jpg", "P4-R3-V1": "img/P4-R3-V1.jpg", "P4-R4-V1": "img/P4-R4-V1.jpg", "P4-R5-V1": "img/P4-R5-V1.jpg", "P4-Z1": "img/P4-Z1.jpg", "P3-R3-V4": "img/P3-R3-V4.jpg", "P3-Z1": "img/P3-Z1.jpg", "P3-Z2": "img/P3-Z2.jpg", "P3-Z4": "img/P3-Z4.jpg", "P3-Z5": "img/P3-Z5.jpg", "P3-R1-V1": "img/P3-R1-V1.jpg", "P3-R2-V1": "img/P3-R2-V1.jpg", "P3-R2-V2": "img/P3-R2-V2.jpg", "P3-R3-V1": "img/P3-R3-V1.jpg", "P3-R3-V2": "img/P3-R3-V2.jpg", "P3-R3-V3": "img/P3-R3-V3.jpg", "P3-R4-V1": "img/P3-R4-V1.jpg", "P3-R5-V1": "img/P3-R5-V1.jpg", "P3-R6-V1": "img/P3-R6-V1.jpg", "P3-R6-V2": "img/P3-R6-V2.jpg", "P3-FRONT": "img/P3-FRONT.jpg", "P1-FRONT": "img/P1-FRONT.jpg", "P1-R1-V1": "img/P1-R1-V1.jpg", "P1-R1-V2": "img/P1-R1-V2.jpg", "P1-R1-V3": "img/P1-R1-V3.jpg", "P1-R1-V4": "img/P1-R1-V4.jpg", "P1-R2-V1": "img/P1-R2-V1.jpg", "P1-R2-V2": "img/P1-R2-V2.jpg", "P1-R2-V3": "img/P1-R2-V3.jpg", "P1-R2-V4": "img/P1-R2-V4.jpg", "P1-R3-V1": "img/P1-R3-V1.jpg", "P1-R3-V2": "img/P1-R3-V2.jpg", "P1-R3-V3": "img/P1-R3-V3.jpg", "P1-R4-V1": "img/P1-R4-V1.jpg", "P1-R4-V2": "img/P1-R4-V2.jpg", "P1-R4-V3": "img/P1-R4-V3.jpg", "P1-R5-V1": "img/P1-R5-V1.jpg", "P1-R5-V2": "img/P1-R5-V2.jpg", "P1-R5-V3": "img/P1-R5-V3.jpg", "P1-R5-V4": "img/P1-R5-V4.jpg", "P1-R6-V1": "img/P1-R6-V1.jpg", "P1-R6-V2": "img/P1-R6-V2.jpg", "P1-R6-V3": "img/P1-R6-V3.jpg", "P1-R6-V4": "img/P1-R6-V4.jpg", "P1-R6-V5": "img/P1-R6-V5.jpg", "P2-S1": "img/P2-S1.jpg", "P2-S2": "img/P2-S2.jpg", "P2-S3": "img/P2-S3.jpg", "P2-S4": "img/P2-S4.jpg", "P2-S5": "img/P2-S5.jpg", "P2-S6": "img/P2-S6.jpg", "P2-S7": "img/P2-S7.jpg", "P2-S8": "img/P2-S8.jpg", "P2-S9": "img/P2-S9.jpg", "P2-S10": "img/P2-S10.jpg", "P2-S11": "img/P2-S11.jpg", "P2-S12": "img/P2-S12.jpg", "P2-S13": "img/P2-S13.jpg", "P2-S14": "img/P2-S14.jpg"};                 // "P1-FRONT": data-uri
+const LOUPE = {"P5-R6-V1": "img/loupe-P5-R6-V1.jpg", "P5-R6-V2": "img/loupe-P5-R6-V2.jpg", "P5-R6-V3": "img/loupe-P5-R6-V3.jpg", "P1-R7-V1": "img/loupe-P1-R7-V1.png", "P1-R7-V2": "img/loupe-P1-R7-V2.png"};   // hi-res copies of drawing sheets, read by the hover magnifier
+const SLOT_FIT = {                            // per-slot framing; omit a slot to use full-bleed cover
+  "P1-FRONT": { fit: "contain", bg: "#DEE6F7", tone: "light" },
+  "P5-FRONT": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true },
+  "P6-R8-V1": {},
+  "P6-R5-V5": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 }, "P6-R5-V6": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 }, "P6-R2-V3": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },                                // the house render stays full-bleed
+  "P6-R3-V2": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R4-V2": { fit: "contain", bg: "#0B0F11", big: true, clear: 0 },
+  "P6-R5-V2": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R5-V3": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R5-V4": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },   // plan traced from presentation board 1
+  "P4-FRONT": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true }, // elevation sheet until the plan is recovered
+  "P3-FRONT": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true } // floor-plan landing: drafting-paper sheet, uses the whole stage
+};
+const ROOM_FIT = {                             // framing for a whole room; SLOT_FIT still wins per view
+  "P1-R3": { pos: "center 82%" },              // hold the bottom of the frame on wide, short windows
+  "P1-R7": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: .1 },
+  "P5-R6": { fit: "contain", bg: "#0B0F11", big: true, clear: 0 },             // presentation boards, kept clear of the copy
+  "P6-R6": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },   // technical studies: sheets on drafting paper
+  "P6-R7": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R8": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R11": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R13": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R14": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R15": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R16": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R17": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R18": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 },
+  "P6-R19": { fit: "contain", bg: "#F3F4EF", tone: "light", big: true, clear: 0 }   // floor plan + RCP sheets
+};
+/* Projects listed here are a flat slideshow instead of rooms: one sequence of
+   images stepped through with the nav arrows, no hotspot links, no per-room views.
+   Slots are addressed P<n>-S1, P<n>-S2, ... in order. */
+const SLIDESHOW = { p2: true };
+
+const PROJECT_NAMES = {                       // dropdown + rail + front title
+  p1: "Aquality",
+  p2: "Cosentino Supplier Competition",
+  p3: "Residential Redesign",
+  p4: "Teknion Studio",
+  p5: "Mayon Grill",
+  p6: "Technical Studies"
+};
+const ROOM_COUNT = { p1: 7, p4: 5, p6: 20 };
+const HIDDEN_ROOMS = { p6: ["r1", "r6", "r10", "r20"] };   // removed studies: kept numbered so the rest keep their addresses                  // rooms in a project when it has fewer than ROOMS_PER
+const ROOM_NAMES = {                           // renames a room in the rail, its title, and its link pill
+  "P1-R1": "Main Bar",
+  "P1-R2": "Staff Room",
+  "P1-R3": "Lecture Rooms",
+  "P1-R4": "Lobby",
+  "P1-R5": "Mini Bar",
+  "P1-R6": "Aquarium",
+  "P1-R7": "Floor Plan & RCP",
+  "P3-R1": "Exterior",
+  "P3-R2": "Living Room",
+  "P3-R3": "Kitchen & Dining",
+  "P3-R4": "Master Bedroom",
+  "P3-R5": "Master Bath",
+  "P3-R6": "Basement",
+  "P4-R1": "Reception",
+  "P4-R2": "Inner Circle",
+  "P4-R3": "Outer Circle",
+  "P4-R4": "Library & Workspace",
+  "P4-R5": "Yoga Room",
+  "P5-R1": "Exterior",
+  "P5-R2": "Host & Entrance",
+  "P5-R3": "BBQ Dining",
+  "P5-R4": "Bench Dining",
+  "P5-R5": "Bar",
+  "P5-R6": "Presentation Boards",
+  "P6-R1": "Teknion Showroom",
+  "P6-R2": "Revit Lighting",
+  "P6-R3": "Dynamo Practice / Revit Rendering",
+  "P6-R4": "Rhino Pavilion",
+  "P6-R5": "Parametric Table",
+  "P6-R6": "Soft Stool",
+  "P6-R7": "Kitchen Millwork",
+  "P6-R8": "House Set \u2014 Part IV",
+  "P6-R9": "Personal Renders",
+  "P6-R10": "Aquarium Room",
+  "P6-R11": "Restaurant Visualization",
+  "P6-R12": "Rhino Interiors",
+  "P6-R13": "SketchUp Basics",
+  "P6-R14": "Illustrator Boards",
+  "P6-R15": "Market Plan",
+  "P6-R16": "Kitchen Plan Set",
+  "P6-R17": "House Set \u2014 Part II",
+  "P6-R18": "House Set \u2014 Part III",
+  "P6-R19": "CAD Exercises & Tests",
+  "P6-R20": "3D Photo Scan"
+};
+const VIEW_NAMES = {                          // per-view rail/caption label
+  "P2-S1": "Kitchen — Island",
+  "P2-S2": "Pendant — Detail",
+  "P2-S3": "Kitchen — Cooking Run",
+  "P2-S4": "Counter — Detail",
+  "P2-S5": "Backsplash — Detail",
+  "P2-S6": "Plan — From Above",
+  "P2-S7": "Sink — Storage",
+  "P2-S8": "Breakfast Bar",
+  "P2-S9": "Bar — Corner Detail",
+  "P2-S10": "Bar — Surface",
+  "P2-S11": "Dining",
+  "P2-S12": "Entry",
+  "P2-S13": "Entry — Side Table",
+  "P2-S14": "Entry — From Above",
+  "P1-R6-V1": "Tank Corridor",
+  "P1-R6-V2": "Immersive Screen",
+  "P1-R6-V3": "Aquatic Habits Kiosk",
+  "P1-R6-V4": "Activity Results Kiosk",
+  "P1-R6-V5": "Wayfinding Detail",
+  "P1-R7-V1": "Floor Plan",
+  "P1-R7-V2": "Reflected Ceiling Plan",
+  "P3-R2-V1": "Living",
+  "P3-R2-V2": "Evening Light",
+  "P3-R3-V1": "Kitchen & Dining",
+  "P3-R3-V2": "Kitchen \u2014 Island",
+  "P3-R3-V3": "Dining Table",
+  "P3-R3-V4": "Kitchen \u2014 Daylight",
+  "P5-R3-V1": "Grill Island",
+  "P5-R3-V2": "Long Table",
+  "P5-R6-V1": "Concept & Plan",
+  "P5-R6-V2": "Materials & Elevations",
+  "P5-R6-V3": "Lighting & Furniture",
+  "P6-R2-V1": "Daytime",
+  "P4-R1-V2": "Reception \u2014 Front",
+  "P4-R1-V3": "Reception \u2014 Angle",
+  "P5-R2-V2": "Host Stand \u2014 Lighting",
+  "P5-R3-V3": "Lighting \u2014 From Above",
+  "P5-R3-V4": "Lighting \u2014 Lounge",
+  "P5-R4-V2": "Lighting \u2014 Booths",
+  "P5-R4-V3": "Lighting \u2014 Screens",
+  "P5-R5-V2": "Lighting \u2014 Bar",
+  "P6-R5-V5": "Variants",
+  "P6-R5-V6": "3D, Side & Top",
+  "P6-R2-V3": "Assignment 4 \u2014 Day, Night, Stylized",
+  "P6-R9-V1": "Living Room",
+  "P6-R9-V2": "Kitchen",
+  "P6-R9-V3": "Bunker Home",
+  "P6-R10-V1": "Day",
+  "P6-R10-V2": "Night",
+  "P6-R11-V1": "Floor Plan",
+  "P6-R11-V2": "Right Elevation",
+  "P6-R11-V3": "Section Elevation",
+  "P6-R11-V4": "Perspective \u2014 Dining",
+  "P6-R11-V5": "Perspective \u2014 Patio",
+  "P6-R12-V1": "Exterior",
+  "P6-R12-V2": "Interior A",
+  "P6-R12-V3": "Interior B",
+  "P6-R13-V1": "Massing",
+  "P6-R13-V2": "Elevation",
+  "P6-R14-V1": "Construction Container",
+  "P6-R14-V2": "House Board",
+  "P6-R15-V1": "Market Place Plan",
+  "P6-R16-V1": "Cover",
+  "P6-R16-V2": "Partition Plan",
+  "P6-R16-V3": "Furniture Plan",
+  "P6-R16-V4": "Power Plan",
+  "P6-R16-V5": "Plumbing Plan",
+  "P6-R16-V6": "Reflected Ceiling Plan",
+  "P6-R16-V7": "Wall Finish Plan",
+  "P6-R17-V1": "Site Plan",
+  "P6-R17-V2": "Basement Plan",
+  "P6-R17-V3": "First Floor Plan",
+  "P6-R17-V4": "Second Floor Plan",
+  "P6-R17-V5": "Front Elevation",
+  "P6-R17-V6": "Rear Elevation",
+  "P6-R17-V7": "Left Elevation",
+  "P6-R17-V8": "Right Elevation",
+  "P6-R17-V9": "Roof Plan",
+  "P6-R17-V10": "Rendered Elevation",
+  "P6-R18-V1": "Part III \u2014 1",
+  "P6-R18-V2": "Part III \u2014 2",
+  "P6-R18-V3": "Part III \u2014 3",
+  "P6-R18-V4": "Part III \u2014 4",
+  "P6-R18-V5": "Part III \u2014 5",
+  "P6-R18-V6": "T&S \u2014 Basement Plan",
+  "P6-R18-V7": "T&S \u2014 First Floor",
+  "P6-R18-V8": "T&S \u2014 Second Floor",
+  "P6-R18-V9": "T&S \u2014 Front Elevation",
+  "P6-R18-V10": "T&S \u2014 Rear Elevation",
+  "P6-R18-V11": "T&S \u2014 Left Elevation",
+  "P6-R18-V12": "T&S \u2014 Right Elevation",
+  "P6-R18-V13": "T&S \u2014 Roof Detail",
+  "P6-R19-V1": "Assignment 8",
+  "P6-R19-V2": "Assignment 10",
+  "P6-R19-V3": "Week 4",
+  "P6-R19-V4": "Test Prep",
+  "P6-R19-V5": "Test 1",
+  "P6-R19-V6": "Test 2",
+  "P6-R20-V1": "Capture",
+  "P6-R20-V2": "Capture",
+  "P6-R20-V3": "Texture Map",
+
+  "P6-R2-V2": "Night-time",
+  "P6-R3-V1": "Render",
+  "P6-R3-V2": "Precedent Board",
+  "P6-R4-V1": "Render",
+  "P6-R4-V2": "Inspiration Board",
+  "P6-R5-V1": "Render",
+  "P6-R5-V2": "Final Design",
+  "P6-R5-V3": "Studies",
+  "P6-R5-V4": "Prototypes",
+  "P6-R6-V1": "Poster",
+  "P6-R6-V2": "Shop Drawings",
+  "P6-R6-V3": "Case Study",
+  "P6-R6-V4": "Concept",
+  "P6-R6-V5": "Inspiration",
+  "P6-R6-V6": "Materials",
+  "P6-R6-V7": "Joints",
+  "P6-R7-V1": "Cover Sheet",
+  "P6-R7-V2": "Reference Pictures",
+  "P6-R7-V3": "Rough Work",
+  "P6-R7-V4": "Kitchen Plan",
+  "P6-R7-V5": "Kitchen Elevation",
+  "P6-R7-V6": "Kitchen Section",
+  "P6-R7-V7": "Table Drawings",
+  "P6-R8-V1": "Front Render",
+  "P6-R8-V2": "Cover",
+  "P6-R8-V3": "Site Plan",
+  "P6-R8-V4": "Basement Plan",
+  "P6-R8-V5": "First Floor Plan",
+  "P6-R8-V6": "Second Floor Plan",
+  "P6-R8-V7": "Front Elevation",
+  "P6-R8-V8": "Right Elevation",
+  "P6-R8-V9": "Rear Elevation",
+  "P6-R8-V10": "Left Elevation",
+  "P6-R8-V11": "Building Section",
+  "P6-R8-V12": "Wall Section",
+  "P6-R8-V13": "Construction Notes",
+
+  "P3-R6-V1": "Lounge",
+  "P3-R6-V2": "Archery Lane"
+};
+const TEXT = {                                // per-slot copy; body may be a string or an array of paragraphs
+  "P5-FRONT": { body: [
+    "A Filipino BBQ and bar for a ground-floor unit beside Union Station, Toronto, themed as a barbecue night in the Philippines.",
+    "A star-lit ceiling hangs over the room. Diners gather around an open BBQ island with its own grills, banquettes line the windows, and a bar runs along the kitchen wall. Each marker on the plan opens the space it points to."
+  ] },
+  "P4-FRONT": { body: [
+    "A studio and library fit-out branded for Teknion, organised around a ring of timber slats: reception and lounge inside the circle, workspaces, bookshelves and a yoga room around it.",
+    "A wave of stacked timber fins wraps the outer ring, shelving is carved into its curve, and planting and hanging screens soften the space within. Each marker on the elevations opens the space it points to."
+  ] },
+  "P3-FRONT": { body: [
+    "A narrow Toronto house, eighteen feet wide and forty deep, reworked over three floors. The plan is drawn from the working AutoCAD set; each marker opens the room it points to.",
+    "One pale palette runs through every level \u2014 herringbone oak, soft plaster and slatted timber \u2014 with each room given a single warmer gesture: a fireplace, a brass chandelier, a strip of lawn under open sky."
+  ] },
+  "P2-S1": { body: "The room in one look: a sintered-stone island with a waterfall edge, fluted oak beneath it, and a dried-grass pendant carrying the only warm colour in the scheme." },
+  "P2-S2": { body: "Looking down through the pendant. Pampas and dyed fern soften a plan that is otherwise all straight edges and matte stone." },
+  "P2-S3": { body: "The working wall — full-height cabinetry in near-black, reeded glass uppers washed teal from within, and a continuous counter that runs the corner without a visible joint." },
+  "P2-S4": { body: "Close on the surface. A honed grey top holds its colour under warm light and stays matte against the gloss of cut fruit and a lacquered handle." },
+  "P2-S5": { body: "Downlights graze the full-height backsplash, showing the texture the finish keeps when almost nothing else in the frame is lit." },
+  "P2-S6": { body: "From overhead the plan resolves: the kitchen along one edge, a single shaft of daylight from the entry, and the floor left open between them." },
+  "P2-S7": { body: "An oak-lined drawer breaks the dark run, and the counter returns square into the sink with the same stone wrapping the cut-out." },
+  "P2-S8": { body: "Three stools against a fluted oak wall under blackened cylinder pendants — the social edge of the plan, set well clear of the cooking side." },
+  "P2-S9": { body: "Where the oak wall meets the floor, a recessed strip lifts the panelling off the boards and keeps the corner from going flat." },
+  "P2-S10": { body: "The bar top in raking light: one long unbroken plane, thin at the edge, dark enough to read as a shadow of the wall behind it." },
+  "P2-S11": { body: "A veined white top answers the grey of the kitchen. Split logs and a fire set into the wall give the dining end a warmth the cooking side never asks for." },
+  "P2-S12": { body: "Arrival is nearly empty — a door left ajar, one chair, one table. Here the daylight does the work the fittings do everywhere else." },
+  "P2-S13": { body: "The same stone family at its smallest scale: a round top on a blackened base, holding two books and a pair of green glasses." },
+  "P2-S14": { body: "Overhead at the threshold, with light from the open door falling across the boards." },
+  "P1-FRONT": { body: [
+    "A water-awareness centre at Bloor and Bathurst, Toronto. An aquarium, lecture halls, a water bar and eco-friendly retail make the case for cleaner water for people and aquatic life alike, with a quarter of profits going to Water First.",
+    "The plan is governed by one word \u2014 flowing. Reception gives way to lecture hall, retail kiosk, aquarium and finally the bar, a loop paced for crowds rather than queues. Materials darken the deeper you go, like the ocean: a bar built like a boat, fish underfoot for wayfinding, a bright mini-bar in the tanks like an island found at sea."
+  ] }
+};
+const ROOM_TEXT = {                            // copy for a whole room, used by every view in it
+  "P6-R9": { body: "Self-directed Enscape renders made outside of class: a moody, gallery-like living room, a contemporary kitchen and a concrete bunker home in the snow.", meta: ["2023", "Personal Work", "SketchUp & Enscape"] },
+  "P6-R10": { body: "An aquarium-themed room rendered twice \u2014 daylight through the windows, then a night pass lit by the screen wall and accent lighting.", meta: ["2023", "Digital Practice \u2014 Assignment 4", "Revit"] },
+  "P6-R11": { body: "A rustic restaurant and patio documented in Revit: floor plan, two elevations and rendered perspectives of the dining room and covered patio.", meta: ["2023", "CADE 3014 \u2014 Assignment 3", "Revit"] },
+  "P6-R12": { body: "Interior and exterior studies of a brick-walled space modelled and rendered in Rhino.", meta: ["2023", "Rhino \u2014 Project 2, Part 1", "Rhino"] },
+  "P6-R13": { body: "An early SketchUp exercise: a modern two-storey house modelled from massing through to elevation.", meta: ["2020", "SketchUp \u2014 Assignment 01", "SketchUp"] },
+  "P6-R14": { body: "Presentation boards from Visual Communications: a construction-site container home with plan, section and views, and a small house shown in plan, section and elevation.", meta: ["2020", "ARCH 1050 \u2014 Visual Communications", "Illustrator"] },
+  "P6-R15": { body: "A market place plan for the Fall 2021 studio: galleries arranged around a central market under a patterned floor.", meta: ["2021", "Studio \u2014 Fall 2021", "AutoCAD"] },
+  "P6-R16": { body: "A kitchen plan package: partition, furniture, power, plumbing, reflected ceiling and wall finish plans for one small kitchen.", meta: ["2022", "Kitchen Plan Assignment", "AutoCAD"] },
+  "P6-R17": { body: "The second stage of the ARCH 1006 house set: site plan, three floor plans, four elevations, roof plan and a rendered elevation.", meta: ["2021", "ARCH 1006 \u2014 Part II", "AutoCAD"] },
+  "P6-R18": { body: "The third stage of the ARCH 1006 house set, followed by the T&S sheets: floor plans, elevations and a rear roof detail.", meta: ["2021", "ARCH 1006 \u2014 Part III", "AutoCAD"] },
+  "P6-R19": { body: "Shorter AutoCAD exercises and in-class tests: sections, plans and elevations drawn to deadline.", meta: ["2021", "AutoCAD Exercises & Tests", "AutoCAD"] },
+  "P6-R20": { body: "A photogrammetry exercise: a sneaker photographed from every angle, then rebuilt as a textured 3D model.", meta: ["2022", "3D Photo Scan", "Photogrammetry"] },
+  "P6-R1": { body: "A showroom fit-out for Teknion: a locker and lounge space where the brand's display boards and seating sit among white lockers, banquettes and a snack wall, rendered as a gathering for an event.", meta: ["2022", "Showroom Study", "SketchUp & Enscape"] },
+  "P6-R2": { body: "One living room lit twice in Revit — a daylit pass with sun through the glazing, then a night pass carried by a pendant ring and a backlit wall feature.", meta: ["2022", "Assignment 2 — Intro to Lighting", "Revit"] },
+  "P6-R3": { body: "A Revit rendering exercise: a ribbed timber gallery built around a suspended skeleton, with the precedent board that set its direction.", meta: ["2022", "Rendering Project", "Revit"] },
+  "P6-R4": { body: "A pavilion of layered, curving timber ribs modelled in Rhino, shown with the inspiration board behind its form.", meta: ["2023", "Rendering Project", "Rhino"] },
+  "P6-R5": { body: "A parametric side table generated in Dynamo: a curved wire cage under a round top, from study images and prototype variations to the final form.", meta: ["2022", "Parametric Furniture", "Dynamo & Revit"] },
+  "P6-R6": { body: "The Seriously Super Stupid Soft Stool: a playful upholstered stool inspired by a sheep, followed from case study and concept through materials and joinery to shop drawings and a poster.", meta: ["2022", "DSGN 2011 — Stool Project", "Hand Drafting & Fabrication"] },
+  "P6-R7": { body: "Working drawings and materials for a kitchen millwork package: reference photos, rough work, then plan, elevation, section and table details.", meta: ["2022", "DSGN3025 — Assignment 01", "AutoCAD"] },
+  "P6-R8": { body: "A full working drawing set for a two-storey house: site plan, three floor plans, four elevations, a building section, wall section and construction notes, alongside the front render.", meta: ["2021", "ARCH 1006 — Part IV", "AutoCAD"] },
+  "P5-R1": { body: "The storefront: a glazed corner wrapped in black cladding, with the Mayon Grill sign lit above the door." },
+  "P5-R2": { body: "Guests arrive at the host stand under the star-lit ceiling, with the grill island and its woven stools in view straight ahead." },
+  "P5-R3": { body: "The heart of the room is the BBQ island: guests sit around built-in grills and fire bowls, while long tables laid with banana leaves run alongside." },
+  "P5-R4": { body: "Along the windows, green banquettes sit in booths screened by bamboo poles, each lit by its own low pendant." },
+  "P5-R5": { body: "A bar of stone and dark timber, with woven pendants overhead and planting tucked among the bottles behind." },
+  "P5-R6": { body: "The three presentation boards: concept and ground floor plan, materials and elevations, then lighting, furniture and the reflected ceiling plan." },
+  "P1-R7": { body: "The ground floor as drawn: the loop from reception through the lecture halls and retail to the aquarium, mini-bar and bar, then the reflected ceiling plan above it, with the lighting layout and ceiling heights." },
+  "P4-R1": { body: "Arrival sits inside the circle: a curved, backlit slatted desk carrying the Teknion mark, a lounge of soft armchairs around low tables, and a branded screen set into the timber." },
+  "P4-R2": { body: "The heart of the ring. Slatted timber piers frame a quiet lounge, with planting hung from the canopy and a suspended screen feature over a stone seat." },
+  "P4-R3": { body: "Around the outside, bookshelves are cut into a sweeping wave of timber fins, with a bench built into the curve and a linear light tracing the ring overhead." },
+  "P4-R4": { body: "Beyond the ring, open desks and lounge seating sit beneath planted, shelf-lined arches, with the timber wave wall rising alongside." },
+  "P4-R5": { body: "A daylit yoga room: full-height glazing onto trees, pale timber underfoot, floating shelves and soft curtains." },
+  "P3-R1": { body: "The street face: pale stone, a projecting bay with a wrought-iron balcony, and an ornamental gate set between stone piers, lit warm at dusk." },
+  "P3-R2": { body: "A curved sofa faces a timber-clad fireplace, with the screen set above it and herringbone oak running unbroken underfoot. The second view holds the same room under a warmer, rose-toned light." },
+  "P3-R3": { body: "Kitchen and dining share one long room. A waterfall-edge island with three stools anchors the cooking end, a fluted timber wall frames the window, and a solid oak table under a brass chandelier holds the dining end." },
+  "P3-R4": { body: "The master bedroom sits under a slatted timber ceiling, with an upholstered bed, a cushioned seat in the window bay, and a chandelier hung low over the room." },
+  "P3-R5": { body: "A double vessel-sink vanity in veined stone runs beneath a long mirror, with a soaking tub, a glass shower and a planted timber screen carrying the slatted detail through from the bedroom." },
+  "P3-R6": { body: "The basement turns recreational: a lounge with a curved sofa opens onto an indoor archery lane, laid in turf beneath an open lightwell." },
+  "P1-R6": { body: [
+    "The route's lowest point: a corridor of floor-to-ceiling tanks in board-formed concrete, where interpretive kiosks are set flush into the benches rather than mounted on stands, so the water stays the only thing lit.",
+    "A curved LED wall turns one tank into an immersive dive — whales and a diver scaled past the glass — while underfoot, glowing fish icons in the floor lead visitors on toward the mini-bar. Kiosk screens carry conservation data and habitat notes, keeping the room as instructive as it is theatrical."
+  ] },
+  "P1-R5": { body: [
+    "The pit-stop inside the aquarium — an island found mid-journey. Whitewashed brick, rattan and an encaustic-tile counter lift the palette at the darkest point of the route.",
+    "A timber sail rises past the counter and a tank glows behind it, so the sea carries on while you stop. The brighter, natural materials are the treasure at the bottom."
+  ] },
+  "P1-R4": { body: [
+    "Arrival is self-served. A bank of curved kiosks stands off a timber wall, printing tickets at waist height, so entry scatters into a loose crowd rather than a line at a desk.",
+    "Gloss blue shells against oak and pale stone: the first hint of the water running through the building, and the lightest point on a route that darkens all the way down."
+  ] },
+  "P1-R3": { body: [
+    "Lectures are pitched at whoever is in the room, and here that is the youngest visitors: bean bags and moulded stools instead of rows, a curved wall, and a screen the size of it where an animated host takes questions live.",
+    "The palette steps away from the public route \u2014 sage, mint and pale timber, an arched niche of soft toys, a cushioned window seat \u2014 so the teaching rooms read closer to a nursery than a theatre."
+  ] },
+  "P1-R2": { body: [
+    "Back of house gets the same care as the floor. A slatted oak wall, a high communal table and a round marble one give staff somewhere to eat, brief and decompress between shifts, with a kitchenette at one end and no visitors in sight.",
+    "The blue upholstery is the tell \u2014 the one room where the aquarium\u2019s colour leaves the tanks and lands on the furniture. A split-face stone panel, lit turquoise along its top edge, runs the length of the counter, so the water is present even off duty."
+  ] },
+  "P1-R1": { body: [
+    "The aquarium draws people in, but the water bar is the point \u2014 a tasting counter of waters drawn from streams around the world, each at a different pH and TDS, so visitors can taste the difference and learn what it does to the body.",
+    "Materials come from aquatic and island building: rattan pendants, brick, stone and dense planting. Overhead, a parametric slat wall of timber fins swells and curls into the ceiling, so the room reads as a wave breaking over the dining floor."
+  ] }
+};
+const PROJECT_META = {                        // metadata line for every slot in a project
+  p1: ["2023", "DSGN3008", "AutoCAD, SketchUp & Enscape"],
+  p2: ["2023", "DSGN3008", "AutoCAD, SketchUp & Enscape"],
+  p3: ["2023", "DSGN3030", "AutoCAD, SketchUp & Enscape"],
+  p4: ["2022", "DSGN First Semester", "AutoCAD, SketchUp & Enscape"],
+  p5: ["2022", "Design Development", "AutoCAD, SketchUp & Enscape"],
+  p6: ["2021\u20132023", "Technical Studies", "AutoCAD, Revit, Rhino & Dynamo"]
+};
+
+/* ---------- shared published content: edits saved for every viewer ---------- */
+/* Overrides live in content.json beside this page and are published through the
+   artifact capability, so a drag or a retyped line reaches everyone, not just
+   the browser that made it. Without the capability (a downloaded copy opened
+   from disk) the page falls back to the old per-browser localStorage staging. */
+let SHARED = { spots: {}, text: {} };
+let ART = null;                     // artifact namespace once the viewer grants it
+let FILES_OK = true;                // files-form publish available? proven false on first refusal
+(function readSeed(){                // inline seed: what the last full publish wrote
+  const el = document.getElementById("seed");
+  if(!el) return;
+  try {
+    const j = JSON.parse(el.textContent);
+    if(j && typeof j === "object"){ SHARED.spots = j.spots || {}; SHARED.text = j.text || {}; }
+  } catch(e){}
+})();
+let SEED = (typeof fetch === "function")
+  ? fetch("content.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+  : Promise.resolve(null);
+
+let saveTimer = null, saving = false, dirty = false;
+
+function setSave(msg, cls){
+  ["#savePos", "#saveText"].forEach(sel => {
+    const el = document.querySelector(sel);
+    if(!el) return;
+    el.textContent = msg;
+    el.className = "savestate" + (cls ? " " + cls : "");
+  });
+}
+function scopeNote(){
+  setSave(ART ? "saves for everyone" : "this browser only", ART ? "" : "warn");
+}
+function queueSave(){
+  if(!ART) return;
+  dirty = true;
+  setSave("unsaved\u2026", "work");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveNow, 1200);   // batch a flurry of drags into one publish
+}
+async function saveNow(){
+  if(!ART || saving || !dirty) return;
+  saving = true; dirty = false;
+  setSave("saving\u2026", "work");
+  try {
+    // Preferred: publish just the small data file. Some hosts don't serve the files
+    // form at all — they answer capability_disabled — so fall back to republishing
+    // the whole document, which every host supports.
+    if(FILES_OK){
+      try {
+        await ART.publish({ "content.json": JSON.stringify(SHARED) });
+        setSave("saved for everyone", "ok");
+        return;
+      } catch(e){
+        const c = (e && e.code) || "";
+        if(["capability_disabled","capability_removed","read_only_path","transform_error"].includes(c)) FILES_OK = false;
+        else throw e;
+      }
+    }
+    await ART.publish(pageSource());
+    setSave("saved for everyone", "ok");
+  } catch(err){
+    const code = (err && err.code) || "upstream_error";
+    if(code === "conflict"){
+      setSave("someone else saved first", "warn");   // every view reloads to the winner
+    } else if(["not_writer","not_granted","not_declared","consent_required"].includes(code)){
+      ART = null;
+      setSave("read-only view", "warn");
+    } else if(["capability_disabled","capability_removed"].includes(code)){
+      ART = null;
+      setSave("saving unavailable here", "warn");
+    } else if(code === "rate_limited"){
+      dirty = true;
+      setSave("saving slowly\u2026", "warn");
+      clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 6000);
+    } else if(code === "too_large"){
+      setSave("too large to save", "err");
+    } else {
+      dirty = true;
+      setSave("save failed (" + code + ") \u2014 retrying", "err");
+      clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 4000);
+    }
+  } finally {
+    saving = false;
+    if(dirty && ART){ clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 1500); }
+  }
+}
+
+(async () => {
+  const [seed, cap] = await Promise.all([
+    SEED,
+    (window.claude && typeof claude.use === "function") ? claude.use("artifact").catch(() => null) : null
+  ]);
+  if(seed && typeof seed === "object"){
+    SHARED.spots = seed.spots || {};
+    SHARED.text  = seed.text  || {};
+  }
+  if(cap){
+    ART = cap;
+    // Published content is the truth now; drop stale per-browser staging so an old
+    // local drag can never mask what everyone else sees.
+    try {
+      Object.keys(localStorage)
+        .filter(k => /^(spots|text):/.test(k))
+        .forEach(k => localStorage.removeItem(k));
+    } catch(e){}
+  }
+  scopeNote();
+  render();
+})();
+
+/* The final slide is the presentation board itself, rebuilt in the site's own
+   type and palette: swatches and the floor plan lifted from Carl's board, the
+   render column dropped, and the repeated brand blurbs pulled out as footnotes. */
+const SWATCH = {
+  "0.01": "img/0.01.jpg",
+  "0.02": "img/0.02.jpg",
+  "0.03": "img/0.03.jpg",
+  "0.04": "img/0.04.jpg",
+  "0.05": "img/0.05.jpg",
+  "0.06": "img/0.06.jpg",
+  "0.07": "img/0.07.jpg",
+  "0.08": "img/0.08.jpg",
+  "0.09": "img/0.09.jpg",
+  "0.10": "img/0.10.jpg"
+};
+const PLAN_IMG = "img/cosentino-plan.jpg";
+const BOARDS = {
+  "P2-S15": {
+    brand: "Cosentino", brand2: "Aquality",
+    ttl: "Aquality", sub: "Staff Room & Office",
+    credit: "Carl Moscoso // Deja Banton",
+    intro: "Aquality\u00AE is a mixed use space catering towards the United Nations\u2019 goal to ensure access to water and sanitation for all through the concept of flowing. Our spaces uses materials such as wood and stone catering to our furniture colour gradients in each room that help depict the depth of the ocean. Considering our gradient, we chose countertops to help give balance between our materials and furnitures for an intentional and natural look. Welcome to our underwater cave.",
+    order: ["0.01","0.02","0.03","0.04","0.05","0.06","0.07","0.08","0.09","0.10"],
+    notes: [
+      ["Dekton", "Dekton surfaces offer technical properties, high performance, and distinctive colours and textures. Dekton benefits from high strength and versatility."],
+      ["Silestone", "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant."]
+    ]
+  }
+};
+
+const MATERIALS = {                           // spec text transcribed from the Cosentino board
+  "0.01": { t: "0.01 Micron", s: ["Dekton - Kraftizen - Matte", "2cm Thick - 322 x 145cm format"], n: "Dekton surfaces offer technical properties, high performance, and distinctive colours and textures. Dekton benefits from high strength and versatility." },
+  "0.02": { t: "0.02 Kreta", s: ["Dekton - Industrial Collection - Matte", "2cm Thick - 322 x 145cm format"], n: "Dekton surfaces offer technical properties, high performance, and distinctive colours and textures. Dekton benefits from high strength and versatility." },
+  "0.03": { t: "0.03 Corktown", s: ["Silestone - Loft - Suede", "2cm Thick - 327 x 159cm format"], n: "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant." },
+  "0.04": { t: "0.04 Ethereal Noctis", s: ["Silestone - Ethereal - Polished", "3cm Thick - 327 x 159cm format"], n: "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant." },
+  "0.05": { t: "0.05 Camden", s: ["Silestone - Loft - Suede", "3cm Thick - 327 x 159cm format"], n: "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant." },
+  "0.06": { t: "0.06 Tebas Black", s: ["Silestone - Mythology - Polished", "3cm Thick - 327 x 159cm format"], n: "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant." },
+  "0.07": { t: "0.07 Somnia", s: ["Dekton - Onirika - Matte", "1.2cm Thick - 330 x 163cm format"], n: "Dekton surfaces offer technical properties, high performance, and distinctive colours and textures. Dekton benefits from high strength and versatility." },
+  "0.08": { t: "0.08 Faro White", s: ["Silestone - Sunlit Days - Suede", "3cm Thick - 306 x 141cm format"], n: "Silestone is a high trendsetter in the market. Developed with HybridQ+ technology, minimal maintenance, and is highly stain and scratch resistant." },
+  "0.09": { t: "0.09 Staggered Oak Panelling", s: [], n: "" },
+  "0.10": { t: "0.10 Red Cedar Stack", s: [], n: "" }
+};
+/* Callouts per slot: x/y are % of the RENDERED IMAGE, ang is the leader angle in
+   degrees (negative = up), len its length in em. Material ids key into MATERIALS. */
+const MARKS = {
+  "P2-S1": [{m:"0.01",x:62,y:58,ang:-34,len:9}, {m:"0.09",x:44,y:80,ang:-14,len:13}],
+  "P2-S3": [{m:"0.01",x:41,y:62,ang:-32,len:10}, {m:"0.06",x:50,y:80,ang:-25,len:10}],
+  "P2-S4": [{m:"0.01",x:26,y:60,ang:-30,len:10}],
+  "P2-S5": [{m:"0.01",x:46,y:44,ang:-24,len:10}],
+  "P2-S7": [{m:"0.01",x:30,y:28,ang:-28,len:10}, {m:"0.06",x:72,y:35,ang:-145,len:8}],
+  "P2-S8": [{m:"0.09",x:52,y:34,ang:-26,len:10}, {m:"0.01",x:30,y:64,ang:-18,len:11}],
+  "P2-S10": [{m:"0.01",x:52,y:54,ang:-32,len:10}, {m:"0.09",x:80,y:24,ang:-152,len:9}],
+  "P2-S11": [{m:"0.04",x:52,y:50,ang:-36,len:10}, {m:"0.10",x:26,y:27,ang:-146,len:8}],
+  "P2-S12": [{m:"0.04",x:63,y:79,ang:-34,len:9}, {m:"0.06",x:64,y:85,ang:-12,len:12}],
+  "P2-S13": [{m:"0.04",x:47,y:50,ang:-32,len:10}, {m:"0.06",x:45,y:82,ang:-16,len:12}]
+};
+
+/* Close-up renders shown as a zoom callout inside a room render: a lens circle on the
+   spot, a cone opening out to an inset frame holding the close-up. Click either to view it large.
+   x/y/r are % of the rendered image (r of its width); box = [left %, top %, width %] of the image. */
+const ZOOMS = {
+  "P4-R1-V2": [{ z: "P4-Z2", n: "Countertop \u2014 Detail", x: 44, y: 38, r: 4.5, box: [8, 20, 19] },
+               { z: "P4-Z3", n: "Lit Edge \u2014 Detail", x: 73, y: 50, r: 4, box: [76, 21, 17] }],
+  "P5-R3-V3": [{ z: "P5-Z1", n: "Grill Island \u2014 From Above", x: 46, y: 45, r: 6, box: [64, 23, 20] }],
+  "P4-R1-V1": [{ z: "P4-Z1", n: "Reception Desk \u2014 Detail", x: 75, y: 68, r: 6, box: [28, 8, 21] }],
+  "P3-R3-V2": [{ z: "P3-Z1", n: "Sink \u2014 Detail",      x: 85,   y: 61, r: 5.5, box: [55, 7, 22] }],
+  "P3-R5-V1": [{ z: "P3-Z2", n: "Shower Wall \u2014 Detail", x: 47,   y: 33, r: 5,   box: [16, 9, 20] },
+               { z: "P3-Z4", n: "Tub Surround \u2014 Detail", x: 70,   y: 81, r: 5,   box: [76, 47, 20] }],
+  "P3-R6-V1": [{ z: "P3-Z5", n: "Stair Treads \u2014 Detail", x: 92,  y: 68, r: 3.8, box: [64, 10, 22] }]
+};
+
+const FRONT_LABEL = "Main";                   // the landing room's name, in the rail and eyebrow
+const FRONT_NAMES = { p3: "Floor Plan", p4: "Elevations", p5: "Floor Plan", p6: "Library" };      // per-project landing name, overrides FRONT_LABEL
+/* a corner shortcut to a project's drawings room, shown on its other views */
+const DRAWINGS = { p1: { room: "r7", items: ["Floor plan", "RCP"] }, p5: { room: "r6", items: ["Concept", "Materials", "Lighting"] } };
+const BACK_LABEL  = { p1: "Iso view", p3: "Floor plan", p4: "Elevations", p5: "Floor plan", p6: "Library" };   // the back-to-landing button on room views
+
+const ABOUT_ROWS = [
+  ["Discipline","Interior Design & Space Planning"],
+  ["Software","AutoCAD · Revit · SketchUp · Rhino · Enscape · Dynamo · Photoshop"],
+  ["Education","Adv. Diploma, Interior Design Technology — George Brown Polytechnic, 2023"],
+  ["Location","Toronto, ON"],
+  ["Contact","carlbenedictmoscoso@gmail.com · linkedin.com/in/carl-moscoso"]
+];
+
+const $ = s => document.querySelector(s);
+let P = PROJECTS[0], R = "front", V = 0;
+
+function slideCount(p){
+  let n = 0;
+  const tag = p.id.toUpperCase();
+  while(SLOT_IMG[`${tag}-S${n + 1}`] || BOARDS[`${tag}-S${n + 1}`]) n++;
+  return n;
+}
+function roomsOf(p){
+  const all = roomsOfRaw(p);
+  if(p.id !== "p6" || typeof LIBRARY === "undefined") return all;
+  const at = id => { const k = LIBRARY.findIndex(c => c.room === id); return k < 0 ? 999 : k; };
+  return [all[0]].concat(all.slice(1).sort((a, b) => at(a.id) - at(b.id)));
+}
+function roomsOfRaw(p){
+  if(SLIDESHOW[p.id]) return [{id:"front", n:FRONT_NAMES[p.id] || FRONT_LABEL, views: slideCount(p) || 1, spots:false, slides:true}];
+  return [{id:"front", n:FRONT_NAMES[p.id] || FRONT_LABEL, views:1, spots:true}].concat(
+    Array.from({length: p.rooms}, (_, i) => i).filter(i => !(HIDDEN_ROOMS[p.id] || []).includes("r" + (i + 1))).map(i => {
+      let filled = 0;
+      for(let k = 1; k <= VIEWS_PER || SLOT_IMG[`${p.id.toUpperCase()}-R${i + 1}-V${k}`]; k++)
+        if(SLOT_IMG[`${p.id.toUpperCase()}-R${i + 1}-V${k}`]) filled = k;
+      return {
+        id: "r" + (i + 1),
+        n: ROOM_NAMES[p.id.toUpperCase() + "-R" + (i + 1)] || "Room " + String(i + 1).padStart(2, "0"),
+        views: filled || VIEWS_PER
+      };
+    }));
+}
+function roomOf(p, id){ return roomsOf(p).find(r => r.id === id) || roomsOf(p)[0]; }
+function slotId(p, r, i){
+  if(SLIDESHOW[p.id] && r.id === "front") return p.id.toUpperCase() + "-S" + (i + 1);
+  return p.id.toUpperCase() + "-" + (r.id === "front" ? "FRONT" : r.id.toUpperCase() + "-V" + (i + 1));
+}
+
+function render(){
+  const rooms = roomsOf(P), r = roomOf(P, R);
+  V = Math.min(V, r.views - 1);
+  const sid = slotId(P, r, V);
+
+  const img = SLOT_IMG[sid], fit = SLOT_FIT[sid] || ROOM_FIT[P.id.toUpperCase() + "-" + r.id.toUpperCase()] || {};
+  const stage = $("#stage"), app = $("#app");
+  stage.classList.toggle("has-img", !!img);
+  stage.classList.toggle("fit-contain", !!img && fit.fit === "contain");
+  const big = !!img && fit.fit === "contain" && !!fit.big;
+  stage.classList.toggle("fit-big", big); app.classList.toggle("fit-big", big);
+  app.classList.toggle("fit-clear", big && fit.clear != null);
+  CUR_FIT = fit;
+  stage.style.backgroundImage = img ? `url("${img}")` : "";
+  stage.dataset.src = img || "";
+  stage.style.backgroundColor = img && fit.bg ? fit.bg : "";
+  stage.style.backgroundPosition = img && fit.pos ? fit.pos : "";
+  stage.style.paddingLeft = img && fit.padLeft ? fit.padLeft : "";
+  const vg = $("#vignette");
+  if(img){
+    const rgb = fit.tone === "light" ? hexRgb(fit.bg || "#DEE6F7") : "6,9,10";
+    vg.style.background =
+      `radial-gradient(64% 60% at 0% 100%, rgba(${rgb},.95) 0%, rgba(${rgb},.66) 40%, rgba(${rgb},0) 76%)`;
+  } else vg.style.background = "";
+  app.classList.toggle("img-on", !!img);
+  app.classList.toggle("tone-light", !!img && fit.tone === "light");
+  app.style.setProperty("--tone-bg", fit.bg || "#DEE6F7");
+  $("#slotcard").innerHTML = `<div class="id">${sid}</div><div class="st">Empty — no image assigned</div>`;
+
+  const t = TEXT[sid] || ROOM_TEXT[P.id.toUpperCase() + "-" + r.id.toUpperCase()] || {};
+  const vname = VIEW_NAMES[sid];
+  const sv = savedText(sid) || {};
+  const defTitle = r.id === "front" ? P.n : r.n;
+  const defBody = Array.isArray(t.body) ? t.body : [t.body || (r.id === "front"
+      ? "Project title and a short intro paragraph. Tell me the words and this fills in."
+      : "Room name, then a line or two about it.")];
+  const defMeta = t.meta || PROJECT_META[P.id] || ["Year", "Course or client", "Software"];
+  const live = (saved, fallback) =>
+    (Array.isArray(saved) ? saved : saved != null ? [saved] : null);
+  const title  = (sv.title && !isPlaceholder(sv.title)) ? sv.title : defTitle;
+  const bodies = (sv.body && !sv.body.every(isPlaceholder)) ? sv.body : defBody;
+  const meta   = (sv.meta && !sv.meta.every(isPlaceholder)) ? sv.meta : defMeta;
+  $("#caption").dataset.def = JSON.stringify({ title: defTitle, body: defBody, meta: defMeta });
+  const ce = editingText ? ' contenteditable="plaintext-only" spellcheck="false"' : "";
+  $("#caption").innerHTML = `
+    ${r.id === "front" ? `<p class="eyebrow">${r.slides ? (vname || "") : r.n}${img ? "" : " \u2014 slot " + sid}</p>` : ""}
+    <h1${ce} data-f="title">${title}</h1>
+    ${bodies.map((par, bi) => `<p class="body"${ce} data-f="body" data-i="${bi}">${par}</p>`).join("")}
+    <div class="meta">${meta.map((m, mi) => `<span${ce} data-f="meta" data-i="${mi}">${m}</span>`).join("")}</div>`;
+  const written = !!(t.body || sv.body);
+  $("#caption").querySelectorAll("p.body").forEach(el => el.style.fontStyle = written ? "normal" : "italic");
+  $("#textslot").textContent = sid;
+  $("#app").classList.toggle("multi", r.views > 1);
+  renderMarks(sid, img);
+  renderZooms(sid, img);
+  renderBoard(sid);
+  if(editingText) $("#caption").querySelectorAll("[contenteditable]").forEach(el => {
+    if(!el.isContentEditable) el.setAttribute("contenteditable", "true");   // older engines
+  });
+  fitTitle();
+  fitBig();
+  $("#caption").classList.remove("anim"); void $("#caption").offsetWidth; $("#caption").classList.add("anim");
+
+  $("#app").classList.toggle("has-strip", r.views > 1 && !r.slides);
+  $("#strip").innerHTML = (r.views > 1 && !r.slides)
+    ? Array.from({length: r.views}, (_, i) => {
+        const s2 = slotId(P, r, i), im = SLOT_IMG[s2];
+        const label = VIEW_NAMES[s2] || (im ? "" : "V" + (i + 1));   // a filled view speaks for itself
+        return `<button class="thumb ${im ? "has-img" : ""}" data-view="${i}" aria-current="${i === V}"
+          title="${VIEW_NAMES[s2] || "Slot " + s2}" ${im ? `style="background-image:url('${im}')"` : ""}>${label ? `<b>${label}</b>` : ""}</button>`;
+      }).join("")
+    : "";
+
+  $("#rail").innerHTML = `<span class="railtag">${P.n}</span>` + (rooms.length < 2 ? [] : rooms).map(x =>
+    `<button class="rlink" data-room="${x.id}" aria-current="${x.id === r.id}">${x.n}</button>`).join("");
+
+  /* back to the landing scene (plan / iso) from any room view */
+  app.classList.toggle("p6-room", P.id === "p6" && r.id !== "front");
+  const bk = $("#backFront"), frontSid = slotId(P, rooms[0], 0), frontImg = SLOT_IMG[frontSid];
+  bk.hidden = r.id === "front" || !!r.slides;
+  if(!bk.hidden){
+    const ff = SLOT_FIT[frontSid] || {};
+    bk.querySelector("b").textContent = BACK_LABEL[P.id] || "Overview";
+    bk.setAttribute("aria-label", "Back to " + (BACK_LABEL[P.id] || "overview").toLowerCase());
+    const th = bk.querySelector(".bthumb");
+    th.style.backgroundImage = frontImg ? `url("${frontImg}")` : "";
+    th.style.backgroundColor = ff.bg || "#12181B";
+    th.style.backgroundSize = ff.fit === "contain" ? "contain" : "cover";
+    th.hidden = !frontImg;
+  }
+
+  const dcf = DRAWINGS[P.id], dcn = $("#drawCorner");
+  dcn.hidden = !dcf || R === dcf.room;
+  if(!dcn.hidden){
+    dcn.innerHTML = dcf.items.map((lab, i) => {
+      const im = SLOT_IMG[`${P.id.toUpperCase()}-${dcf.room.toUpperCase()}-V${i + 1}`];
+      return `<button class="dcb" data-goview="${dcf.room}:${i}" aria-label="Open ${lab}">
+        <span class="dthumb" ${im ? `style="background-image:url('${im}')"` : ""}></span><b>${lab}</b></button>`;
+    }).join("");
+  } else dcn.innerHTML = "";
+
+  const hasLoupe = !!loupeSrc(sid) && !!img;
+  app.classList.toggle("loupe-on", hasLoupe);
+  if(hasLoupe){
+    const touch = matchMedia("(hover: none)").matches;
+    $("#caption").insertAdjacentHTML("afterbegin", `<p class="loupehint"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21M10.5 7.5v6M7.5 10.5h6"/></svg>${touch ? "Drag across the drawing to magnify" : "Hover to magnify<i>\u00b7</i>Scroll to zoom"}</p>`);
+  }
+  $("#loupe").hidden = true;
+  $("#loupe").style.backgroundImage = hasLoupe ? `url("${loupeSrc(sid)}")` : "";
+
+  const spots = $("#spots");
+  if(r.spots){
+    const targets = rooms.slice(1, (SLOT_SPOTS[sid] || DEFAULT_SPOTS).length + 1);
+    const pos = savedSpots(sid) || SLOT_SPOTS[sid] || DEFAULT_SPOTS;
+    spots.hidden = false;
+    spots.innerHTML = targets.map((t, i) => {
+      const p = pos[i] || (SLOT_SPOTS[sid] || DEFAULT_SPOTS)[i];
+      const d = p.dir === "w" ? "w" : p.dir === "e" ? "e" : (p.x > 58 ? "w" : "e");
+      return `<button class="spot ${d === "w" ? "flip" : ""}" data-dir="${p.dir || ""}" data-room="${t.id}"
+        style="left:${p.x}%;top:${p.y}%" aria-label="Enter ${t.n}">
+        <span class="arw" aria-hidden="true">${d === "w" ? "\u2190" : "\u2192"}</span><span class="txt">Enter ${t.n}</span><span class="coord">${Math.round(p.x)},${Math.round(p.y)}</span>
+      </button>`;
+    }).join("");
+    placeSpots();
+    if(img) aspectOf(img, () => placeSpots());
+    updateReadout();
+  } else { spots.hidden = true; spots.innerHTML = ""; }
+
+  /* projects dropdown */
+  $("#projMenu").innerHTML = PROJECTS.map(p =>
+    `<button class="dditem" role="menuitem" data-proj="${p.id}" aria-current="${p.id === P.id}">
+      <span>${p.n}</span><i>${SLIDESHOW[p.id] ? slideCount(p) + " renders" : (roomsOf(p).length - 1) + (p.id === "p6" ? " studies" : " rooms")}</i></button>`).join("");
+
+  /* explore */
+  $("#exploreTitle").textContent = P.n + (SLIDESHOW[P.id] ? " \u2014 renders" : " \u2014 rooms");
+  $("#exploreGrid").innerHTML = rooms.map(x => `
+    <button class="card" data-room="${x.id}">
+      <div class="ph" ${SLOT_IMG[slotId(P, x, 0)] ? `style="background-image:url('${SLOT_IMG[slotId(P, x, 0)]}');background-size:cover;background-position:center"` : ""}>${SLOT_IMG[slotId(P, x, 0)] ? "" : `<b>${slotId(P, x, 0)}</b>`}</div>
+      <div class="cb"><p class="cn">${x.n}</p><p class="cs">${x.views} slot${x.views > 1 ? "s" : ""} — empty</p></div>
+    </button>`).join("");
+
+  /* slot map */
+  $("#mapBody").innerHTML = rooms.flatMap(x =>
+    Array.from({length: x.views}, (_, i) => `<tr>
+      <td>${slotId(P, x, i)}</td>
+      <td>${P.n}, ${x.n}${x.views > 1 ? ", view " + (i + 1) : ""}</td>
+      <td>${SLOT_IMG[slotId(P, x, i)] ? "Image set" : "Empty"} — ${i === 0
+        ? "scene image, title, paragraph, metadata" + (x.spots ? ", plus 4 hotspot links" : "")
+        : "scene image + view name"}</td>
+    </tr>`)).join("");
+
+  $("#projcount").textContent = PROJECTS.length + " Projects";
+  document.title = (r.id === "front" ? P.n : P.n + " · " + r.n) + " — Rooms by Carl Moscoso";
+}
+
+/* ---------- routing ---------- */
+function fromHash(){
+  const m = (location.hash || "").match(/#\/(p\d+)(?:\/([a-z0-9]+))?(?:\/(\d+))?/);
+  P = (m && PROJECTS.find(p => p.id === m[1])) || PROJECTS[0];
+  R = (m && m[2]) || "front";
+  V = m && m[3] ? +m[3] : 0;
+  render();
+}
+function go(pid, rid, idx){
+  const h = `#/${pid}/${rid}` + (idx ? `/${idx}` : "");
+  if(location.hash === h) fromHash(); else location.hash = h;
+}
+addEventListener("hashchange", fromHash);
+
+/* ---------- events ---------- */
+document.addEventListener("click", e => {
+  const pb = e.target.closest("#projBtn");
+  if(pb){ toggleMenu(); return; }
+  const pj = e.target.closest("[data-proj]");
+  if(pj){ closeMenu(); closeSheets(); go(pj.dataset.proj, "front", 0); return; }
+  const lf = e.target.closest("[data-libfilter]");
+  if(lf){ LIB_FILTER = lf.dataset.libfilter; renderLibrary(); return; }
+  const gv = e.target.closest("[data-goview]");
+  if(gv){ const [rid, ix] = gv.dataset.goview.split(":"); closeMenu(); closeSheets(); go(P.id, rid, +ix); return; }
+  const zm = e.target.closest("[data-zoom]");
+  if(zm){ openZoom(+zm.dataset.zoom); return; }
+  if(e.target.closest("#lightbox")){ closeZoom(); return; }
+  const rm = e.target.closest("[data-room]");
+  if(rm){
+    if(editing && rm.classList.contains("spot")) return;   // dragging, not navigating
+    closeMenu(); closeSheets(); go(P.id, rm.dataset.room, 0); return;
+  }
+  const vw = e.target.closest("[data-view]");
+  if(vw){ go(P.id, R, +vw.dataset.view); return; }
+  const sh = e.target.closest("[data-sheet]");
+  if(sh){ closeMenu(); openSheet(sh.dataset.sheet); return; }
+  if(e.target.closest("[data-close]")){ closeSheets(); return; }
+  if(!e.target.closest("#projMenu")) closeMenu();
+});
+
+function toggleMenu(){
+  const m = $("#projMenu"), b = $("#projBtn"), open = m.classList.toggle("open");
+  b.setAttribute("aria-expanded", open);
+}
+function closeMenu(){ $("#projMenu").classList.remove("open"); $("#projBtn").setAttribute("aria-expanded","false"); }
+function openSheet(n){
+  closeSheets();
+  const s = document.getElementById("sheet-" + n);
+  s.classList.add("open"); s.setAttribute("aria-hidden","false");
+  s.querySelector(".close").focus();
+}
+function closeSheets(){
+  document.querySelectorAll(".sheet").forEach(s => { s.classList.remove("open"); s.setAttribute("aria-hidden","true"); });
+}
+addEventListener("keydown", e => {
+  if(e.key === "Escape" && !$("#lightbox").hidden){ closeZoom(); return; }
+  if(!$("#lightbox").hidden) return;
+  if(e.key === "Escape"){
+    const busy = document.querySelector(".sheet.open") || $("#projMenu").classList.contains("open");
+    closeMenu(); closeSheets();
+    if(!busy && !editing && !editingText && R !== "front") go(P.id, "front", 0);
+    return;
+  }
+  if(document.querySelector(".sheet.open") || $("#projMenu").classList.contains("open")) return;
+  const r = roomOf(P, R);
+  if(e.key === "ArrowRight" && r.views > 1) go(P.id, R, (V + 1) % r.views);
+  if(e.key === "ArrowLeft"  && r.views > 1) go(P.id, R, (V - 1 + r.views) % r.views);
+});
+
+/* ---------- link position editor ---------- */
+/* --- where the image actually lands, so link pills can ride with it --- */
+const arCache = {};
+/* big framing with a caption to clear: grow the image as far as it can go while
+   the model (which starts \`clear\` of the way into the image) stays right of the copy */
+let CUR_FIT = {};
+function fitBig(){
+  const st = $("#stage"), f = CUR_FIT || {};
+  const on = st.classList.contains("fit-big") && f.clear != null && innerWidth > 860;
+  st.style.paddingRight = "";
+  st.style.paddingLeft = f.padLeft || "";
+  if(!on) return;
+  const ar = arCache[st.dataset.src];
+  if(!ar){ aspectOf(st.dataset.src, () => { fitBig(); placeSpots(); }); return; }
+  const cs = getComputedStyle(st), em = parseFloat(getComputedStyle($("#app")).fontSize);
+  const W = st.clientWidth, H = st.clientHeight;
+  const pt = parseFloat(cs.paddingTop), pb = parseFloat(cs.paddingBottom), pr = parseFloat(cs.paddingRight);
+  const cap = $("#caption"), capR = cap.offsetLeft + cap.offsetWidth + 1.6 * em, c = f.clear;
+  const w = Math.max(200, Math.min((H - pt - pb) * ar, (W - pr - capR) / (1 - c)));
+  const L = Math.max(0, Math.min(Math.max(capR - c * w, (W - w) / 2), W - pr - w));
+  st.style.paddingLeft = L + "px";
+  st.style.paddingRight = Math.max(0, W - L - w) + "px";
+}
+function aspectOf(src, cb){
+  if(arCache[src]) return cb(arCache[src]);
+  const im = new Image();
+  im.onload = () => { arCache[src] = im.naturalWidth / im.naturalHeight; cb(arCache[src]); };
+  im.onerror = () => cb(16 / 9);
+  im.src = src;
+}
+/* a long word like RESTAURANT must not run past its column */
+function fitTitle(){
+  const h = $("#caption h1"); if(!h) return;
+  h.style.fontSize = "";
+  let size = 3.7, guard = 0;
+  while(h.scrollWidth > h.clientWidth + 1 && size > 1.6 && guard++ < 40){
+    size -= 0.1;
+    h.style.fontSize = size.toFixed(2) + "em";
+  }
+}
+
+const LIBRARY = [                             // Technical Studies landing: one card per study (room); grid order = this order
+  { room: "r9", kind: "render", tools: ["SketchUp", "Enscape"], year: "2023", cover: "img/P6-C9.jpg" },
+  { room: "r4", kind: "render", tools: ["Rhino"], year: "2023", cover: "img/P6-C4.jpg" },
+  { room: "r3", kind: "render", tools: ["Revit"], year: "2022", cover: "img/P6-C3.jpg" },
+  { room: "r2", kind: "render", tools: ["Revit"], year: "2022", cover: "img/P6-C2.jpg" },
+  { room: "r11", kind: "render", tools: ["Revit"], year: "2023", cover: "img/P6-C11.jpg" },
+  { room: "r12", kind: "render", tools: ["Rhino"], year: "2023", cover: "img/P6-C12.jpg" },
+  { room: "r13", kind: "render", tools: ["SketchUp"], year: "2020", cover: "img/P6-C13.jpg" },
+  { room: "r5", kind: "furniture", tools: ["Dynamo", "Revit"], year: "2022", cover: "img/P6-C5.jpg" },
+  { room: "r14", kind: "drawings", tools: ["Illustrator"], year: "2020", cover: "img/P6-C14.jpg" },
+  { room: "r15", kind: "drawings", tools: ["AutoCAD"], year: "2021", cover: "img/P6-C15.jpg" },
+  { room: "r16", kind: "drawings", tools: ["AutoCAD"], year: "2022", cover: "img/P6-C16.jpg" },
+  { room: "r7", kind: "drawings", tools: ["AutoCAD"], year: "2022", cover: "img/P6-C7.jpg" },
+  { room: "r17", kind: "drawings", tools: ["AutoCAD"], year: "2021", cover: "img/P6-C17.jpg" },
+  { room: "r18", kind: "drawings", tools: ["AutoCAD"], year: "2021", cover: "img/P6-C18.jpg" },
+  { room: "r8", kind: "drawings", tools: ["AutoCAD"], year: "2021", cover: "img/P6-C8.jpg" },
+  { room: "r19", kind: "drawings", tools: ["AutoCAD"], year: "2021", cover: "img/P6-C19.jpg" },
+];
+const LIB_KINDS = [["all","All"],["render","Rendering"],["drawings","Drawings"],["furniture","Furniture"]];
+let LIB_FILTER = "all";
+function renderLibrary(){
+  const box = $("#board"), rooms = roomsOf(P);
+  const cards = LIBRARY.map(c => {
+    const r = rooms.find(x => x.id === c.room); if(!r) return "";
+    const t = ROOM_TEXT[P.id.toUpperCase() + "-" + c.room.toUpperCase()] || {};
+    const label = (LIB_KINDS.find(k => k[0] === c.kind) || ["", ""])[1];
+    return `<button class="lib-card" data-room="${c.room}" data-kind="${c.kind}" ${LIB_FILTER !== "all" && LIB_FILTER !== c.kind ? "hidden" : ""}>
+      <span class="lib-cover" data-cover="${c.cover}" style="background-image:url('${c.cover}')"><span class="lib-fade"></span><i>${label}</i><em data-n="${r.views}">${r.views} ${r.views > 1 ? "images" : "image"}</em></span>
+      <span class="lib-body"><b>${r.n}</b>
+        <span class="lib-meta">${c.year} \u00b7 ${(t.meta && t.meta[1]) || ""}</span>
+        <span class="lib-tools">${c.tools.map(x => `<i>${x}</i>`).join("")}</span></span>
+    </button>`;
+  }).join("");
+  libStop();
+  box.innerHTML = `<div class="lib">
+    <header class="lib-head">
+      <p class="eyebrow">Library \u00b7 ${LIBRARY.length} studies</p>
+      <h1>${P.n}</h1>
+      <p class="lib-intro">Shorter assignments, software studies and personal work \u2014 rendering in Enscape, Revit and Rhino, form-finding in Dynamo, presentation boards and full AutoCAD drawing sets. Pick a study to step through it.</p>
+      <div class="lib-filter" role="group" aria-label="Filter studies">${LIB_KINDS.map(([k, n]) =>
+        `<button data-libfilter="${k}" aria-pressed="${k === LIB_FILTER}">${n}</button>`).join("")}</div>
+    </header>
+    <div class="lib-grid">${cards}</div>
+  </div>`;
+}
+/* hovering a study card cycles through its images every 2s, crossfading */
+const LIB_CYCLE_MS = 2000;
+let libTimer = null, libCard = null;
+function libImages(card){
+  const tag = P.id.toUpperCase() + "-" + card.dataset.room.toUpperCase();
+  const out = [];
+  for(let k = 1; SLOT_IMG[`${tag}-V${k}`]; k++) out.push(SLOT_IMG[`${tag}-V${k}`]);
+  return out;
+}
+function libStop(){
+  clearInterval(libTimer); libTimer = null;
+  if(libCard){
+    const em = libCard.querySelector(".lib-cover em"), fade = libCard.querySelector(".lib-fade");
+    if(em){ const n = +em.dataset.n; em.textContent = n + (n > 1 ? " images" : " image"); }
+    if(fade){ fade.style.opacity = 0; }
+    const cov = libCard.querySelector(".lib-cover");
+    if(cov) setTimeout(() => { if(libCard !== cov.closest(".lib-card")) cov.style.backgroundImage = `url('${cov.dataset.cover}')`; }, 650);
+  }
+  libCard = null;
+}
+function libStart(card){
+  if(libCard === card) return;
+  libStop();
+  const imgs = libImages(card); if(imgs.length < 2) return;
+  imgs.slice(1).forEach(src => { const im = new Image(); im.src = src; });   // warm the cache
+  libCard = card;
+  const fade = card.querySelector(".lib-fade"), em = card.querySelector(".lib-cover em");
+  let i = 0;
+  const step = () => {
+    i = (i + 1) % imgs.length;
+    if(+getComputedStyle(fade).opacity > .5){        // settle the shown image underneath, then fade the next one in
+      card.querySelector(".lib-cover").style.backgroundImage = fade.style.backgroundImage;
+      fade.style.transition = "none"; fade.style.opacity = 0; void fade.offsetWidth; fade.style.transition = "";
+    }
+    fade.style.backgroundImage = `url("${imgs[i]}")`;
+    fade.style.opacity = 1;
+    em.textContent = (i + 1) + " / " + imgs.length;
+  };
+  step();
+  libTimer = setInterval(step, LIB_CYCLE_MS);
+}
+document.addEventListener("pointerover", e => {
+  const c = e.target.closest && e.target.closest(".lib-card");
+  if(c && e.pointerType !== "touch") libStart(c);
+});
+document.addEventListener("pointerout", e => {
+  const c = e.target.closest && e.target.closest(".lib-card");
+  if(c && !c.contains(e.relatedTarget)) libStop();
+});
+
+function renderBoard(sid){
+  const b = BOARDS[sid], box = $("#board");
+  const lib = sid === "P6-FRONT";
+  $("#app").classList.toggle("lib-on", lib);
+  if(lib){ $("#app").classList.add("board-on"); box.hidden = false; renderLibrary(); return; }
+  $("#app").classList.toggle("board-on", !!b);
+  box.hidden = !b;
+  if(!b){ box.innerHTML = ""; return; }
+  const cells = b.order.map(id => {
+    const m = MATERIALS[id]; if(!m) return "";
+    const num = m.t.slice(0, 4), name = m.t.slice(5);
+    const sw = SWATCH[id] ? `style="background-image:url('${SWATCH[id]}')"` : "";
+    const spec = (m.s || []).join("<br>");
+    return `<li><i class="bd-sw" ${sw}></i><div class="bd-txt">
+      <span class="bd-no">${num}</span><span class="bd-nm">${name}</span>
+      ${spec ? `<span class="bd-sp">${spec}</span>` : ""}</div></li>`;
+  }).join("");
+  box.innerHTML = `<div class="bd">
+    <header>
+      <p class="bd-lock"><b>${b.brand}</b><i>\u00D7</i><s>${b.brand2}</s></p>
+      <p class="bd-intro">${b.intro}</p>
+    </header>
+    <div class="bd-plan">
+      <img src="${PLAN_IMG}" alt="Floor plan">
+      <div class="bd-ttl"><span>${b.ttl}</span><b>${b.sub}</b></div>
+      <p class="bd-credit">${b.credit}</p>
+    </div>
+    <ul class="bd-grid">${cells}</ul>
+    <div class="bd-notes">${b.notes.map(n => `<p><b>${n[0]}</b>${n[1]}</p>`).join("")}</div>
+  </div>`;
+}
+
+function renderMarks(sid, img){
+  const list = (MARKS[sid] || []), box = $("#marks"), stage = $("#stage");
+  const on = !!(list.length && img && !editing && !editingText);
+  box.hidden = !on;
+  // the slow ken-burns zoom would slide the image out from under the leader lines
+  stage.classList.toggle("no-kb", on);
+  if(!on){ box.innerHTML = ""; return; }
+  box.innerHTML = list.map(k => {
+    const m = MATERIALS[k.m]; if(!m) return "";
+    const ang = k.ang == null ? -35 : k.ang, len = k.len == null ? 10 : k.len;
+    const rad = ang * Math.PI / 180;
+    const dx = Math.cos(rad) * len, dy = Math.sin(rad) * len;
+    const spec = (m.s || []).map(x => `<p class="sp">${x}</p>`).join("");
+    const note = m.n ? `<p class="nt">${m.n}</p>` : "";
+    return `<div class="mark ${dx < 0 ? "l" : "r"}" style="left:${k.x}%;top:${k.y}%" tabindex="0">
+      <i class="dot"></i>
+      <i class="lead" style="width:${len}em;transform:rotate(${ang}deg)"></i>
+      <div class="lab" style="left:${dx.toFixed(2)}em;top:${dy.toFixed(2)}em">
+        <b class="mt">${m.t}</b>
+        <div class="md">${spec}${note}</div>
+      </div></div>`;
+  }).join("");
+  placeMarks();
+  if(img) aspectOf(img, () => placeMarks());
+}
+/* touch has no hover: tap toggles the panel open */
+document.addEventListener("click", e => {
+  const mk = e.target.closest(".mark");
+  document.querySelectorAll(".mark.open").forEach(x => { if(x !== mk) x.classList.remove("open"); });
+  if(mk) mk.classList.toggle("open");
+});
+
+/* The rendered image rect. Unlike placeSpots this also solves the COVER case, where
+   the image overflows the stage and a stage-relative % would drift off the object
+   it points at as the window aspect changes. */
+function imageRect(){
+  const stage = $("#stage"), r = stage.getBoundingClientRect(), cs = getComputedStyle(stage);
+  const ar = arCache[stage.dataset.src] || 16 / 9;
+  const py0 = parseFloat((cs.backgroundPosition.split(" ")[1] || "50%")) / 100, py = isNaN(py0) ? .5 : py0;
+  if(stage.classList.contains("fit-contain")){
+    const pl = parseFloat(cs.paddingLeft), pr = parseFloat(cs.paddingRight);
+    const pt = parseFloat(cs.paddingTop),  pb = parseFloat(cs.paddingBottom);
+    const cw = Math.max(1, r.width - pl - pr), ch = Math.max(1, r.height - pt - pb);
+    let w, h; if(cw / ch > ar){ h = ch; w = ch * ar; } else { w = cw; h = cw / ar; }
+    return { l: pl + (cw - w) / 2, t: pt + (ch - h) * py, w, h };
+  }
+  let w, h; if(r.width / r.height > ar){ w = r.width; h = r.width / ar; } else { h = r.height; w = r.height * ar; }
+  return { l: (r.width - w) / 2, t: (r.height - h) * py, w, h };
+}
+function renderZooms(sid, img){
+  const list = ZOOMS[sid] || [], box = $("#zooms");
+  const on = !!(list.length && img && !editing && !editingText);
+  box.hidden = !on;
+  if(!on){ box.innerHTML = ""; return; }
+  $("#stage").classList.add("no-kb");          // the image must hold still under the lens
+  box.innerHTML = `<svg class="zcone" aria-hidden="true"></svg>` + list.map((z, i) => `
+    <button class="zlens" data-zoom="${i}" aria-label="Open ${z.n}"></button>
+    <button class="zinset" data-zoom="${i}" aria-label="Open ${z.n}" style="background-image:url('${SLOT_IMG[z.z]}')">
+      <span>${z.n}</span></button>`).join("");
+  let left = list.length;
+  list.forEach(z => aspectOf(SLOT_IMG[z.z], () => { if(--left === 0) placeZooms(); }));
+  aspectOf(img, () => placeZooms());
+}
+function placeZooms(){
+  const box = $("#zooms");
+  if(box.hidden) return;
+  const list = ZOOMS[currentSlot()] || [];
+  const f = imageRect(), W = f.w, H = f.h;
+  Object.assign(box.style, { left: f.l + "px", top: f.t + "px", width: W + "px", height: H + "px" });
+  const svg = box.querySelector("svg"); svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  let paths = "";
+  list.forEach((z, i) => {
+    const cx = z.x / 100 * W, cy = z.y / 100 * H, R = z.r / 100 * W;
+    const bx = z.box[0] / 100 * W, by = z.box[1] / 100 * H, bw = z.box[2] / 100 * W;
+    const bh = bw / (arCache[SLOT_IMG[z.z]] || 1.5);
+    const lens = box.querySelector(`.zlens[data-zoom="${i}"]`), ins = box.querySelector(`.zinset[data-zoom="${i}"]`);
+    Object.assign(lens.style, { left: (cx - R) + "px", top: (cy - R) + "px", width: 2 * R + "px", height: 2 * R + "px" });
+    Object.assign(ins.style, { left: bx + "px", top: by + "px", width: bw + "px", height: bh + "px" });
+    // the cone: outer tangents from the lens to the two corners that bound the inset as seen from it
+    const mid = Math.atan2(by + bh / 2 - cy, bx + bw / 2 - cx);
+    const pts = [[bx, by], [bx + bw, by], [bx + bw, by + bh], [bx, by + bh]].map(([px, py]) => {
+      const a = Math.atan2(py - cy, px - cx); let rel = a - mid;
+      while(rel > Math.PI) rel -= 2 * Math.PI; while(rel < -Math.PI) rel += 2 * Math.PI;
+      return { px, py, a, rel, d: Math.hypot(px - cx, py - cy) };
+    }).sort((p, q) => p.rel - q.rel);
+    const lo = pts[0], hi = pts[3];
+    const tan = (p, sgn) => { const al = Math.acos(Math.min(1, R / p.d)), t = p.a + sgn * al; return [cx + R * Math.cos(t), cy + R * Math.sin(t)]; };
+    const [tlx, tly] = tan(lo, -1), [thx, thy] = tan(hi, 1);
+    paths += `<path class="zfill" d="M${tlx},${tly} L${lo.px},${lo.py} L${hi.px},${hi.py} L${thx},${thy} Z"/>`
+           + `<line x1="${tlx}" y1="${tly}" x2="${lo.px}" y2="${lo.py}"/><line x1="${thx}" y1="${thy}" x2="${hi.px}" y2="${hi.py}"/>`;
+  });
+  svg.innerHTML = paths;
+}
+function openZoom(i){
+  const z = (ZOOMS[currentSlot()] || [])[i]; if(!z) return;
+  const lb = $("#lightbox");
+  lb.querySelector(".lb-img").style.backgroundImage = `url('${SLOT_IMG[z.z]}')`;
+  lb.querySelector(".lb-cap").textContent = z.n;
+  lb.hidden = false; $("#lbClose").focus();
+}
+function closeZoom(){ $("#lightbox").hidden = true; }
+/* hover magnifier for drawing sheets: a round loupe that follows the pointer,
+   reading from the hi-res copy in LOUPE; the wheel changes the power */
+/* per-sheet magnifier settings; a sheet listed here without a LOUPE copy magnifies its own image */
+const LOUPE_ZOOM = { "P6-R16-V1": { zoom: 2, max: 3 }, "P6-R16-V2": { zoom: 2, max: 3 }, "P6-R16-V3": { zoom: 2, max: 3 }, "P6-R16-V4": { zoom: 2, max: 3 }, "P6-R16-V5": { zoom: 2, max: 3 }, "P6-R16-V6": { zoom: 2, max: 3 }, "P6-R16-V7": { zoom: 2, max: 3 }, "P6-R17-V1": { zoom: 2, max: 3 }, "P6-R17-V2": { zoom: 2, max: 3 }, "P6-R17-V3": { zoom: 2, max: 3 }, "P6-R17-V4": { zoom: 2, max: 3 }, "P6-R17-V5": { zoom: 2, max: 3 }, "P6-R17-V6": { zoom: 2, max: 3 }, "P6-R17-V7": { zoom: 2, max: 3 }, "P6-R17-V8": { zoom: 2, max: 3 }, "P6-R17-V9": { zoom: 2, max: 3 }, "P6-R17-V10": { zoom: 2, max: 3 }, "P6-R18-V1": { zoom: 2, max: 3 }, "P6-R18-V2": { zoom: 2, max: 3 }, "P6-R18-V3": { zoom: 2, max: 3 }, "P6-R18-V4": { zoom: 2, max: 3 }, "P6-R18-V5": { zoom: 2, max: 3 }, "P6-R18-V6": { zoom: 2, max: 3 }, "P6-R18-V7": { zoom: 2, max: 3 }, "P6-R18-V8": { zoom: 2, max: 3 }, "P6-R18-V9": { zoom: 2, max: 3 }, "P6-R18-V10": { zoom: 2, max: 3 }, "P6-R18-V11": { zoom: 2, max: 3 }, "P6-R18-V12": { zoom: 2, max: 3 }, "P6-R18-V13": { zoom: 2, max: 3 }, "P6-R19-V1": { zoom: 2, max: 3 }, "P6-R19-V2": { zoom: 2, max: 3 }, "P6-R19-V3": { zoom: 2, max: 3 }, "P6-R19-V4": { zoom: 2, max: 3 }, "P6-R19-V5": { zoom: 2, max: 3 }, "P6-R19-V6": { zoom: 2, max: 3 }, "P6-R11-V1": { zoom: 2, max: 3 }, "P6-R11-V2": { zoom: 2, max: 3 }, "P6-R11-V3": { zoom: 2, max: 3 }, "P6-R14-V1": { zoom: 2, max: 3 }, "P6-R14-V2": { zoom: 2, max: 3 }, "P6-R15-V1": { zoom: 2, max: 3 }, "P6-R7-V3": { zoom: 2, max: 3 }, "P6-R7-V4": { zoom: 2, max: 3 }, "P6-R7-V5": { zoom: 2, max: 3 }, "P6-R7-V6": { zoom: 2, max: 3 }, "P6-R7-V7": { zoom: 2, max: 3 }, "P6-R8-V3": { zoom: 2, max: 3 }, "P6-R8-V4": { zoom: 2, max: 3 }, "P6-R8-V5": { zoom: 2, max: 3 }, "P6-R8-V6": { zoom: 2, max: 3 }, "P6-R8-V7": { zoom: 2, max: 3 }, "P6-R8-V8": { zoom: 2, max: 3 }, "P6-R8-V9": { zoom: 2, max: 3 }, "P6-R8-V10": { zoom: 2, max: 3 }, "P6-R8-V11": { zoom: 2, max: 3 }, "P6-R8-V12": { zoom: 2, max: 3 }, "P6-R8-V13": { zoom: 2, max: 3 }, "P6-R6-V2": { zoom: 2, max: 3 } };
+const loupeSrc = sid => LOUPE[sid] || (LOUPE_ZOOM[sid] ? SLOT_IMG[sid] : null);
+const loupeCfg = sid => Object.assign({ zoom: 2.24, max: 6, min: 1.2 }, LOUPE_ZOOM[sid] || {});
+let LZ = 2.24, LZ_SID = "";
+function moveLoupe(e){
+  const lp = $("#loupe"), sid = currentSlot();
+  if(!loupeSrc(sid) || editing || editingText){ lp.hidden = true; return; }
+  const cfg = loupeCfg(sid);
+  if(LZ_SID !== sid){ LZ = cfg.zoom; LZ_SID = sid; }
+  const st = $("#stage").getBoundingClientRect(), f = imageRect();
+  const mx = e.clientX - st.left, my = e.clientY - st.top;
+  if(mx < f.l || my < f.t || mx > f.l + f.w || my > f.t + f.h){ lp.hidden = true; return; }
+  lp.hidden = false;
+  const D = lp.offsetWidth, z = Math.min(Math.max(LZ, cfg.min), cfg.max);
+  lp.style.left = mx + "px"; lp.style.top = my + "px";
+  lp.style.backgroundSize = `${f.w * z}px ${f.h * z}px`;
+  lp.style.backgroundPosition = `${-((mx - f.l) * z - D / 2)}px ${-((my - f.t) * z - D / 2)}px`;
+  lp.dataset.x = e.clientX; lp.dataset.y = e.clientY;
+}
+(() => {
+  const st = $("#stage");
+  st.addEventListener("pointermove", moveLoupe);
+  st.addEventListener("pointerdown", moveLoupe);
+  st.addEventListener("pointerleave", () => { $("#loupe").hidden = true; });
+  st.addEventListener("wheel", e => {
+    const sid = currentSlot();
+    if(!loupeSrc(sid)) return;
+    e.preventDefault();
+    const cfg = loupeCfg(sid);
+    if(LZ_SID !== sid){ LZ = cfg.zoom; LZ_SID = sid; }
+    LZ = Math.min(cfg.max, Math.max(cfg.min, LZ * (e.deltaY < 0 ? 1.15 : 1 / 1.15)));
+    moveLoupe(e);
+  }, { passive: false });
+})();
+function placeMarks(){
+  const box = $("#marks"), stage = $("#stage");
+  if(box.hidden) return;
+  const r = stage.getBoundingClientRect();
+  const cs = getComputedStyle(stage);
+  const ar = arCache[stage.dataset.src] || 16 / 9;
+  let f;
+  if(stage.classList.contains("fit-contain")){
+    const pl = parseFloat(cs.paddingLeft), pr = parseFloat(cs.paddingRight);
+    const pt = parseFloat(cs.paddingTop),  pb = parseFloat(cs.paddingBottom);
+    const cw = Math.max(1, r.width - pl - pr), ch = Math.max(1, r.height - pt - pb);
+    let w, h;
+    if(cw / ch > ar){ h = ch; w = ch * ar; } else { w = cw; h = cw / ar; }
+    const py = parseFloat((cs.backgroundPosition.split(" ")[1] || "50%")) / 100;
+    f = { l: pl + (cw - w) / 2, t: pt + (ch - h) * (isNaN(py) ? .5 : py), w, h };
+  } else {
+    const cw = r.width, ch = r.height;
+    let w, h;
+    if(cw / ch > ar){ w = cw; h = cw / ar; } else { h = ch; w = ch * ar; }
+    const py = parseFloat((cs.backgroundPosition.split(" ")[1] || "50%")) / 100;
+    f = { l: (cw - w) / 2, t: (ch - h) * (isNaN(py) ? .5 : py), w, h };
+  }
+  box.style.left = f.l + "px"; box.style.top = f.t + "px";
+  box.style.width = f.w + "px"; box.style.height = f.h + "px";
+}
+
+function placeSpots(){
+  const box = $("#spots"), stage = $("#stage");
+  const r = stage.getBoundingClientRect();
+  const fit = () => {
+    if(!stage.classList.contains("fit-contain")) return { l:0, t:0, w:r.width, h:r.height };
+    const cs = getComputedStyle(stage);
+    const pl = parseFloat(cs.paddingLeft), pr = parseFloat(cs.paddingRight);
+    const pt = parseFloat(cs.paddingTop),  pb = parseFloat(cs.paddingBottom);
+    const cw = Math.max(1, r.width - pl - pr), ch = Math.max(1, r.height - pt - pb);
+    const ar = arCache[stage.dataset.src] || 16 / 9;
+    let w, h;
+    if(cw / ch > ar){ h = ch; w = ch * ar; } else { w = cw; h = cw / ar; }
+    const py = parseFloat((cs.backgroundPosition.split(" ")[1] || "50%")) / 100;
+    return { l: pl + (cw - w) / 2, t: pt + (ch - h) * (isNaN(py) ? .5 : py), w, h };
+  };
+  const f = fit();
+  box.style.left = f.l + "px"; box.style.top = f.t + "px";
+  box.style.width = f.w + "px"; box.style.height = f.h + "px";
+  box.style.right = "auto"; box.style.bottom = "auto";
+}
+addEventListener("resize", () => { fitTitle(); fitBig(); placeSpots(); placeMarks(); placeZooms(); });
+
+function hexRgb(h){
+  const m = h.replace("#","");
+  const n = parseInt(m.length === 3 ? m.split("").map(c => c + c).join("") : m, 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255].join(",");
+}
+
+// dir: "e" label right, "w" label left, "s" label below, "n" label above; omit for auto e/w
+const DEFAULT_SPOTS = [{x:46,y:63,dir:"e"},{x:58,y:25,dir:"w"},{x:76,y:14,dir:"w"},{x:73,y:57,dir:"w"},{x:15,y:40,dir:"e"},{x:39,y:35,dir:"w"}];
+const SLOT_SPOTS = {                           // per-project landing layouts; x/y are % of the rendered image
+  "P5-FRONT": [{x:95,y:46,dir:"w"},{x:92,y:39,dir:"w"},{x:77,y:49,dir:"w"},{x:70,y:17,dir:"w"},{x:58,y:72,dir:"e"}],
+  "P4-FRONT": [{x:10.5,y:33,dir:"e"},{x:39,y:32,dir:"e"},{x:80.5,y:68.7,dir:"w"},{x:55.5,y:76.4,dir:"w"},{x:89,y:27.7,dir:"w"}],
+  "P3-FRONT": [{x:50.3,y:24.0,dir:"w"},{x:38.2,y:28.9,dir:"w"},{x:22.5,y:25.8,dir:"e"},{x:87.1,y:15.3,dir:"w"},{x:80.4,y:32.6,dir:"w"},{x:85.3,y:75.7,dir:"w"}]
+};
+let editing = false, editingText = false;
+const PLACEHOLDER = [
+  "Project title and a short intro paragraph. Tell me the words and this fills in.",
+  "Room name, then a line or two about it.",
+  "Year", "Course or client", "Software"
+];
+const isPlaceholder = v => PLACEHOLDER.includes((v || "").trim());
+function savedText(sid){
+  if(ART) return SHARED.text[sid] || null;
+  try { return JSON.parse(localStorage.getItem("text:" + sid) || "null"); } catch(e){ return null; }
+}
+
+function currentSlot(){ return slotId(P, roomOf(P, R), V); }
+function savedSpots(sid){
+  if(ART) return SHARED.spots[sid] || null;
+  try { return JSON.parse(localStorage.getItem("spots:" + sid) || "null"); } catch(e){ return null; }
+}
+function readSpots(){
+  return [...document.querySelectorAll("#spots .spot")].map(sp => {
+    const o = { x: +parseFloat(sp.style.left).toFixed(1), y: +parseFloat(sp.style.top).toFixed(1) };
+    if(sp.dataset.dir) o.dir = sp.dataset.dir;
+    return o;
+  });
+}
+function persistSpots(){
+  const v = readSpots();
+  if(ART){ SHARED.spots[currentSlot()] = v; queueSave(); return; }
+  try { localStorage.setItem("spots:" + currentSlot(), JSON.stringify(v)); } catch(e){}
+}
+function updateReadout(){
+  const el = $("#readout"); if(!el) return;
+  const list = readSpots();
+  el.textContent = list.length
+    ? currentSlot() + " links → " + list.map((p, i) => `${i + 1}:(${Math.round(p.x)},${Math.round(p.y)})`).join("  ")
+    : "This slot has no links.";
+}
+
+$("#editBtn").addEventListener("click", () => {
+  if(!editing && editingText) $("#textBtn").click();
+  editing = !editing;
+  $("#app").classList.toggle("editing", editing);
+  $("#editBtn").setAttribute("aria-pressed", editing);
+  if(editing) scopeNote();
+  updateReadout();
+});
+$("#donePos").addEventListener("click", () => { clearTimeout(saveTimer); saveNow(); $("#editBtn").click(); });
+$("#resetPos").addEventListener("click", () => {
+  if(ART){ delete SHARED.spots[currentSlot()]; queueSave(); }
+  else { try { localStorage.removeItem("spots:" + currentSlot()); } catch(e){} }
+  render();
+});
+$("#copyPos").addEventListener("click", async () => {
+  const t = $("#readout").textContent, b = $("#copyPos");
+  try { await navigator.clipboard.writeText(t); b.textContent = "Copied"; }
+  catch(e){ b.textContent = "Select + copy"; }
+  setTimeout(() => { b.textContent = "Copy"; }, 1600);
+});
+
+document.addEventListener("pointerdown", e => {
+  if(!editing) return;
+  const sp = e.target.closest(".spot"); if(!sp) return;
+  e.preventDefault();
+  const coord = sp.querySelector(".coord");
+  const move = ev => {
+    const rect = $("#spots").getBoundingClientRect();
+    const x = Math.min(96, Math.max(4, ((ev.clientX - rect.left) / rect.width) * 100));
+    const y = Math.min(93, Math.max(7, ((ev.clientY - rect.top) / rect.height) * 100));
+    sp.style.left = x.toFixed(1) + "%";
+    sp.style.top  = y.toFixed(1) + "%";
+    if(!sp.dataset.dir){
+      sp.classList.toggle("flip", x > 58);
+      const a = sp.querySelector(".arw");
+      if(a) a.textContent = x > 58 ? "\u2190" : "\u2192";
+    }
+    if(coord) coord.textContent = Math.round(x) + "," + Math.round(y);
+    updateReadout();
+  };
+  const up = () => {
+    document.removeEventListener("pointermove", move);
+    document.removeEventListener("pointerup", up);
+    persistSpots(); updateReadout();
+  };
+  document.addEventListener("pointermove", move);
+  document.addEventListener("pointerup", up);
+});
+
+/* ---------- scene text editor ---------- */
+$("#textBtn").addEventListener("click", () => {
+  if(!editingText && editing) $("#editBtn").click();
+  editingText = !editingText;
+  $("#app").classList.toggle("editing-text", editingText);
+  $("#textBtn").setAttribute("aria-pressed", editingText);
+  if(editingText) scopeNote();
+  render();
+  if(editingText) $("#caption h1").focus();
+});
+$("#doneText").addEventListener("click", () => { clearTimeout(saveTimer); saveNow(); $("#textBtn").click(); });
+$("#resetText").addEventListener("click", () => {
+  if(ART){ delete SHARED.text[currentSlot()]; queueSave(); }
+  else { try { localStorage.removeItem("text:" + currentSlot()); } catch(e){} }
+  render();
+});
+$("#caption").addEventListener("input", () => {
+  if(!editingText) return;
+  const cap = $("#caption");
+  const clean = el => el.textContent.replace(/\s+/g, " ").trim();
+  const def = JSON.parse(cap.dataset.def || "{}");
+  const now = {
+    title: clean(cap.querySelector('[data-f="title"]')),
+    body: [...cap.querySelectorAll('[data-f="body"]')].map(clean),
+    meta: [...cap.querySelectorAll('[data-f="meta"]')].map(clean)
+  };
+  const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  const out = {};
+  if(now.title !== (def.title || "")) out.title = now.title;
+  if(!same(now.body, def.body || [])) out.body = now.body;
+  if(!same(now.meta, def.meta || [])) out.meta = now.meta;
+  const slot = currentSlot();
+  if(ART){
+    if(Object.keys(out).length) SHARED.text[slot] = out;
+    else delete SHARED.text[slot];              // back to the built-in copy, nothing to store
+    queueSave();
+  } else {
+    const key = "text:" + slot;
+    try {
+      if(Object.keys(out).length) localStorage.setItem(key, JSON.stringify(out));
+      else localStorage.removeItem(key);
+    } catch(e){}
+  }
+});
+$("#copyText").addEventListener("click", async () => {
+  const cap = $("#caption"), b = $("#copyText");
+  const clean = el => el.textContent.replace(/\s+/g, " ").trim();
+  const lines = [currentSlot() + " text",
+    "title: " + clean(cap.querySelector('[data-f="title"]'))];
+  [...cap.querySelectorAll('[data-f="body"]')].forEach((el, i) => lines.push(`body ${i + 1}: ` + clean(el)));
+  lines.push("meta: " + [...cap.querySelectorAll('[data-f="meta"]')].map(clean).join(" | "));
+  const txt = lines.join("\n");
+  try { await navigator.clipboard.writeText(txt); b.textContent = "Copied"; }
+  catch(e){ b.textContent = "Select + copy"; }
+  setTimeout(() => { b.textContent = "Copy text"; }, 1600);
+});
+
+/* ---------- step through the views ---------- */
+function stepView(d){
+  const r = roomOf(P, R);
+  if(r.views < 2) return;
+  go(P.id, R, (V + d + r.views) % r.views);
+}
+$("#prevView").addEventListener("click", () => stepView(-1));
+$("#nextView").addEventListener("click", () => stepView(1));
+
+$("#aboutDl").innerHTML = ABOUT_ROWS.map(([k,v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+fromHash();
+</script>
+
+</body></html>
